@@ -132,14 +132,8 @@ img { max-width: 100%; }
 .brand .logo {
   width: 30px;
   height: 30px;
-  border-radius: 8px;
-  background: var(--accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 0.95rem;
+  flex: none;
+  display: block;
 }
 
 .topnav {
@@ -165,7 +159,7 @@ img { max-width: 100%; }
 @media (max-width: 480px) {
   .progress-pill { font-size: 0.68rem; padding: 4px 8px; }
   .brand { font-size: 0.92rem; gap: 6px; }
-  .brand .logo { width: 26px; height: 26px; font-size: 0.85rem; }
+  .brand .logo { width: 26px; height: 26px; }
 }
 
 /* ---------- Layout: sidebar + content ---------- */
