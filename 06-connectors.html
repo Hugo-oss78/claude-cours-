@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6. Connectors — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors" class="active"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 6 · Connect &amp; integrate</span>
+    <h1>Les Connectors</h1>
+    <p class="lede">Par défaut, Claude ne voit que ce que vous lui copiez dans la conversation. Les "connectors" (connecteurs) sont des ponts autorisés vers vos outils réels — boîte mail, agenda, stockage de fichiers, tableurs, dépôts de code — pour que Claude travaille directement avec vos vraies données, sans copier-coller manuel.</p>
+
+    <h2>Comment ça fonctionne, simplement</h2>
+    <div class="steps">
+      <li><h4>Vous autorisez la connexion</h4><p>Vous donnez accès à un compte (ex : votre Gmail) via une procédure d'autorisation sécurisée — Claude ne récupère pas votre mot de passe.</p></li>
+      <li><h4>Claude peut lire (et parfois agir)</h4><p>Selon le connecteur, Claude peut consulter des informations (lire un email, un fichier) et parfois agir (envoyer un brouillon, créer un événement).</p></li>
+      <li><h4>Vous gardez le contrôle</h4><p>Vous pouvez révoquer l'accès à tout moment, et certaines actions sensibles demandent une confirmation explicite.</p></li>
+    </div>
+
+    <h2>Connecteurs utiles pour Love Room</h2>
+    <table>
+      <tr><th>Connecteur (type)</th><th>Usage pour Love Room</th></tr>
+      <tr><td>Boîte mail (ex : Gmail)</td><td>Lire les nouvelles réservations, préparer des réponses, trier les demandes clients.</td></tr>
+      <tr><td>Agenda (ex : Google Calendar)</td><td>Voir les arrivées/départs, planifier le ménage et la maintenance sans conflit.</td></tr>
+      <tr><td>Stockage de fichiers (ex : Google Drive)</td><td>Accéder au tableau de suivi des réservations, aux factures, aux contrats de ménage.</td></tr>
+      <tr><td>Espace de travail / notes (ex : Notion)</td><td>Centraliser les procédures, les fiches fournisseurs (femme de ménage, artisans), le suivi des travaux.</td></tr>
+      <tr><td>Dépôt de code (ex : GitHub)</td><td>Si vous développez votre propre site (module 8-9), Claude Code peut lire/modifier directement le code source.</td></tr>
+    </table>
+
+    <div class="callout uncertain">
+      <strong>Point à vérifier</strong>
+      La liste exacte des connecteurs disponibles, leur nom commercial, et les niveaux d'accès (lecture seule ou lecture/écriture) dépendent de votre plan et évoluent avec les mises à jour du produit. Je ne peux pas garantir que tous les connecteurs cités ci-dessus sont disponibles sur votre compte au moment où vous lisez ceci — vérifiez la liste actuelle directement dans les paramètres de votre compte Claude.
+    </div>
+
+    <h2>Exemple d'usage concret</h2>
+    <div class="promptbox">
+      <span class="label">Une fois un connecteur agenda actif</span>
+      "Regarde mon agenda Love Room pour les 7 prochains jours. Liste les arrivées et départs, et prépare pour chacun un message adapté au bon moment (bienvenue, rappel check-out, remerciement)."
+    </div>
+
+    <h2>Sécurité et bon sens</h2>
+    <ul>
+      <li>Ne connectez que des comptes dont vous comprenez l'usage prévu — commencez par un seul connecteur (ex : l'agenda) avant d'en ajouter d'autres.</li>
+      <li>Vérifiez régulièrement, dans les paramètres de votre compte, la liste des connexions actives et retirez celles que vous n'utilisez plus.</li>
+      <li>Pour des données très sensibles (comptabilité, informations bancaires), privilégiez toujours une vérification humaine avant toute action automatique — voir les garde-fous proposés au module 7.</li>
+    </ul>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="connectors">
+      <li><input type="checkbox" id="c1"><label for="c1">Je comprends la différence entre "copier-coller manuel" et "connecteur autorisé".</label></li>
+      <li><input type="checkbox" id="c2"><label for="c2">J'ai identifié les 2-3 connecteurs prioritaires pour Love Room (mail, agenda, fichiers).</label></li>
+      <li><input type="checkbox" id="c3"><label for="c3">J'ai vérifié dans les paramètres de mon compte quels connecteurs sont réellement disponibles.</label></li>
+    </ul>
+
+    <button data-mark-done="connectors" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="05-workflows.html"><span class="pager-label">Précédent</span>← 5. Workflows</a>
+      <a class="next" href="07-automation.html"><span class="pager-label">Suivant</span>7. Automation →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

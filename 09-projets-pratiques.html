@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>9. Projets pratiques — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique" class="active"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 9 · Du débutant au power user</span>
+    <h1>Projets pratiques : site, application, agent</h1>
+    <p class="lede">Ce module rassemble tout ce qui précède dans trois parcours guidés. Suivez-les dans l'ordre : chaque projet réutilise ce que vous avez appris dans les modules 1 à 8.</p>
+
+    <h2>Projet A — Construire un site vitrine</h2>
+    <p>Objectif : un site simple qui présente votre activité, sans logique complexe derrière (pas encore de réservation automatique).</p>
+    <div class="steps">
+      <li><h4>Cadrez le besoin (module 2)</h4><p>Écrivez en une phrase l'objectif du site, le public visé, et les 3-5 pages indispensables.</p></li>
+      <li><h4>Prototypez avec un Artifact (module 3)</h4><p>Demandez une première version visuelle rapide, pour valider le style et le contenu avant d'investir du temps.</p></li>
+      <li><h4>Construisez le vrai projet avec Claude Code (module 8)</h4><p>Une fois le prototype validé, demandez la version complète, avec plusieurs pages reliées entre elles.</p></li>
+      <li><h4>Testez</h4><p>Ouvrez le site sur ordinateur et sur mobile. Vérifiez que rien ne casse sur petit écran.</p></li>
+      <li><h4>Publiez</h4><p>Demandez à Claude Code de vous accompagner pour la mise en ligne (hébergement + nom de domaine). Voir le glossaire pour ces deux termes.</p></li>
+    </div>
+
+    <h2>Projet B — Construire une petite application</h2>
+    <p>Objectif : un outil qui fait plus qu'afficher de l'information — il garde un état, réagit à une action (ex : un formulaire de réservation qui enregistre une demande).</p>
+    <div class="steps">
+      <li><h4>Listez les actions possibles</h4><p>Que doit pouvoir faire un visiteur ? (ex : consulter les dates dispo, envoyer une demande, recevoir une confirmation)</p></li>
+      <li><h4>Définissez où vivent les données</h4><p>Où seront stockées les réservations ? Un tableau, une base de données simple ? Demandez conseil à Claude Code selon votre niveau technique.</p></li>
+      <li><h4>Construisez petit à petit</h4><p>Une fonctionnalité à la fois : d'abord l'affichage, puis le formulaire, puis la notification par email. Ne demandez pas "tout" en un seul prompt géant.</p></li>
+      <li><h4>Testez chaque étape avant de passer à la suivante</h4><p>Un bug détecté tôt est bien plus simple à corriger qu'un bug découvert à la fin.</p></li>
+      <li><h4>Documentez pour vous-même</h4><p>Demandez à Claude Code un mode d'emploi simple : comment ajouter une info, changer un prix, etc. — utile si vous n'y touchez pas pendant plusieurs mois.</p></li>
+    </div>
+
+    <h2>Projet C — Construire un agent</h2>
+    <p>Objectif : un "agent" qui exécute lui-même une suite d'actions pour atteindre un but, avec moins d'intervention manuelle qu'une simple conversation (ex : surveiller les prix concurrents chaque semaine et produire un rapport).</p>
+    <div class="steps">
+      <li><h4>Définissez le but, pas seulement la tâche</h4><p>Un agent réussit ou échoue par rapport à un objectif clair : "réduire le temps de réponse aux voyageurs à moins de 15 minutes", pas juste "répondre aux messages".</p></li>
+      <li><h4>Donnez-lui des outils précis (module 6)</h4><p>Un agent n'est utile que s'il peut réellement accéder à l'information (agenda, boîte mail) et agir (envoyer un message) via des connecteurs autorisés.</p></li>
+      <li><h4>Posez des limites claires (module 7)</h4><p>Quelles actions l'agent peut faire seul, lesquelles nécessitent votre validation. Commencez restrictif, élargissez avec la confiance.</p></li>
+      <li><h4>Faites-le tourner en surveillance avant de le laisser seul</h4><p>Observez plusieurs cycles complets avant de lui faire confiance sans relecture.</p></li>
+      <li><h4>Prévoyez un moyen de tout arrêter</h4><p>Sachez toujours comment couper une automatisation qui se comporterait mal (ex : messages envoyés en boucle).</p></li>
+    </div>
+
+    <div class="callout warn">
+      <strong>Honnêteté sur le niveau de difficulté</strong>
+      Le Projet A (site vitrine) est accessible à un débutant complet en une à quelques sessions de travail. Le Projet C (agent autonome connecté à vos outils réels) demande plus de rigueur technique et de tests — ne sautez pas les étapes de test, même si Claude Code peut aller vite. Je ne peux pas vous garantir un temps de réalisation précis : cela dépend énormément de la complexité que vous visez.
+    </div>
+
+    <h2>Récapitulatif : de débutant à power user</h2>
+    <table>
+      <tr><th>Étape</th><th>Ce que vous savez faire à la fin</th></tr>
+      <tr><td>Débutant (modules 1-2)</td><td>Discuter efficacement avec Claude, obtenir de bonnes réponses du premier coup.</td></tr>
+      <tr><td>Intermédiaire (modules 3-5)</td><td>Produire des contenus réutilisables (Artifacts, Skills) et des processus documentés (Workflows).</td></tr>
+      <tr><td>Avancé (modules 6-7)</td><td>Connecter Claude à vos vrais outils et automatiser des tâches répétitives avec des garde-fous.</td></tr>
+      <tr><td>Power user (modules 8-10)</td><td>Construire un vrai produit logiciel (site, appli, agent) et l'appliquer à un objectif business réel.</td></tr>
+    </table>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="pratique">
+      <li><input type="checkbox" id="pp1"><label for="pp1">J'ai choisi par quel projet (A, B ou C) je commence selon mon besoin réel.</label></li>
+      <li><input type="checkbox" id="pp2"><label for="pp2">J'ai découpé mon projet en petites étapes testables, plutôt qu'un seul prompt géant.</label></li>
+      <li><input type="checkbox" id="pp3"><label for="pp3">Je sais comment "tout arrêter" si une automatisation se comporte mal.</label></li>
+    </ul>
+
+    <button data-mark-done="pratique" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="08-claude-code.html"><span class="pager-label">Précédent</span>← 8. Claude Code</a>
+      <a class="next" href="10-business-loveroom.html"><span class="pager-label">Suivant</span>10. Cas Love Room →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

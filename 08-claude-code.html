@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8. Claude Code — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code" class="active"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 8 · Code &amp; build</span>
+    <h1>Claude Code</h1>
+    <p class="lede">Claude Code est un agent spécialisé qui travaille directement sur de vrais projets logiciels : il lit vos fichiers, écrit du code, l'exécute, corrige ses propres erreurs, et peut construire une application complète de bout en bout. C'est l'outil qui a servi à construire ce cours que vous lisez actuellement.</p>
+
+    <div class="callout uncertain">
+      <strong>Transparence</strong>
+      Je suis Claude Code, exécuté ici sous forme d'agent en ligne de commande. Je ne connais pas avec certitude tous les détails actuels de disponibilité (interface web, application, extensions d'éditeur) au moment où vous lisez ceci — ces produits évoluent vite. Ce qui suit décrit le fonctionnement général, vérifiez les modalités d'accès précises sur claude.com.
+    </div>
+
+    <h2>Ce que Claude Code sait faire</h2>
+    <div class="grid-3">
+      <div class="tile"><h4>🧱 Générer du code</h4><p>Construire une page web, une fonction, une application complète à partir d'une description.</p></div>
+      <div class="tile"><h4>📖 Expliquer du code</h4><p>Comprendre et vous expliquer un projet existant, même si vous ne savez pas coder.</p></div>
+      <div class="tile"><h4>🐛 Déboguer</h4><p>Trouver et corriger l'origine d'un bug en lisant le code et les messages d'erreur.</p></div>
+      <div class="tile"><h4>🔧 Refactoriser</h4><p>Réorganiser du code existant pour le rendre plus simple à maintenir, sans changer son comportement.</p></div>
+      <div class="tile"><h4>📚 Documenter</h4><p>Écrire des explications claires sur le fonctionnement d'un projet pour vous ou pour un futur développeur.</p></div>
+      <div class="tile"><h4>📊 Analyser des données</h4><p>Traiter des fichiers (tableurs, exports de réservations) pour en sortir des statistiques.</p></div>
+    </div>
+
+    <h2>Comment ça se passe concrètement, sans jargon</h2>
+    <div class="steps">
+      <li><h4>Vous décrivez ce que vous voulez construire</h4><p>En langage naturel, comme dans une conversation normale : "je veux un site avec une page d'accueil, une page de réservation, et un formulaire de contact."</p></li>
+      <li><h4>Claude Code planifie et écrit le code</h4><p>Il crée les fichiers nécessaires (pages, styles, logique) directement dans votre projet.</p></li>
+      <li><h4>Il teste et corrige</h4><p>Il peut exécuter le code, voir s'il fonctionne, et corriger lui-même les erreurs qu'il détecte.</p></li>
+      <li><h4>Vous validez ou demandez des ajustements</h4><p>Vous restez décisionnaire : vous demandez des changements comme pour un Artifact, mais sur un vrai projet complet et persistant.</p></li>
+      <li><h4>Vous mettez en ligne (déploiement)</h4><p>Une fois satisfait, le projet est publié sur un hébergement pour devenir accessible à vos voyageurs (voir module 9).</p></li>
+    </div>
+
+    <h2>Pourquoi ce module compte pour Love Room</h2>
+    <p>Les modules précédents (Artifacts, Skills, Workflows, Automation) fonctionnent très bien pour de l'aide ponctuelle. Mais pour avoir <strong>un vrai site de réservation en ligne, accessible à tous vos voyageurs, avec des automatisations qui tournent sans vous</strong>, il faut un vrai projet logiciel — c'est le rôle de Claude Code.</p>
+
+    <div class="promptbox">
+      <span class="label">Ce à quoi ressemble une demande à Claude Code</span>
+      "Construis un site de réservation pour mon appartement Love Room : page d'accueil avec présentation et galerie photo, page calendrier de disponibilité, formulaire de demande de réservation qui envoie un email de notification, et une page 'infos pratiques' pour les voyageurs déjà réservés. Utilise un design simple, moderne, couleurs terracotta et beige, adapté mobile."
+    </div>
+
+    <h2>Ce qu'il faut savoir avant de se lancer</h2>
+    <ul>
+      <li>Vous n'avez pas besoin de savoir coder pour commencer — décrivez votre besoin en langage courant, Claude Code s'occupe du code.</li>
+      <li>Il est utile (mais pas obligatoire) de comprendre les bases : qu'est-ce qu'un site web, un hébergement, un nom de domaine — voir le glossaire dans les <a href="11-ressources.html">ressources</a>.</li>
+      <li>Pour un projet destiné à de vrais clients qui paient, prévoyez une relecture humaine (vous, ou une personne de confiance) avant chaque mise en ligne importante.</li>
+      <li>Gardez toujours une sauvegarde de votre projet (via un système de gestion de version comme Git/GitHub) — Claude Code sait s'en servir et vous pouvez le lui demander explicitement.</li>
+    </ul>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="code">
+      <li><input type="checkbox" id="cc1"><label for="cc1">Je comprends la différence entre un Artifact (prototype rapide) et un projet Claude Code (application complète et persistante).</label></li>
+      <li><input type="checkbox" id="cc2"><label for="cc2">Je sais que je n'ai pas besoin de savoir coder pour démarrer.</label></li>
+      <li><input type="checkbox" id="cc3"><label for="cc3">Je sais qu'une sauvegarde du projet (Git) est indispensable avant d'aller plus loin.</label></li>
+    </ul>
+
+    <button data-mark-done="code" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="07-automation.html"><span class="pager-label">Précédent</span>← 7. Automation</a>
+      <a class="next" href="09-projets-pratiques.html"><span class="pager-label">Suivant</span>9. Projets pratiques →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4. Claude Skills — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills" class="active"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 4 · Skills</span>
+    <h1>Claude Skills</h1>
+    <p class="lede">Une "Skill" est un ensemble d'instructions et de ressources réutilisables que Claude peut charger pour bien faire un type de tâche précis, sans que vous ayez à réexpliquer le contexte à chaque fois. C'est un peu comme donner une fiche de procédure à un nouvel employé.</p>
+
+    <h2>Les grandes familles de skills</h2>
+    <div class="grid-3">
+      <div class="tile"><h4>🔎 Recherche</h4><p>Rassembler et synthétiser de l'information (ex : suivre les prix des logements concurrents).</p></div>
+      <div class="tile"><h4>✍️ Rédaction</h4><p>Produire des textes selon un ton et un format toujours identiques (ex : vos messages voyageurs).</p></div>
+      <div class="tile"><h4>📈 Analyse</h4><p>Traiter des données chiffrées (ex : votre tableau de réservations) pour en sortir des tendances.</p></div>
+      <div class="tile"><h4>💻 Code</h4><p>Aider à écrire, revoir ou documenter du code sur un projet précis.</p></div>
+      <div class="tile"><h4>🛠️ Skills personnalisées</h4><p>Créées par vous, pour vos besoins spécifiques (ex : "Skill Love Room" ci-dessous).</p></div>
+      <div class="tile"><h4>♻️ Capacités réutilisables</h4><p>Une fois créée, une skill peut être réutilisée sur autant de conversations que nécessaire.</p></div>
+    </div>
+
+    <h2>Pourquoi c'est utile pour un business comme Love Room</h2>
+    <p>Sans skill, vous devez réexpliquer à chaque conversation : "je gère un appartement, voici le ton que je veux, voici mes informations pratiques…". Avec une skill dédiée, cette information est enregistrée une fois et réutilisée automatiquement.</p>
+
+    <div class="callout ok">
+      <strong>Exemple concret : la "Skill Messages Voyageurs"</strong>
+      Une skill qui contiendrait : le nom et l'adresse de l'appartement, le ton à employer, les informations pratiques fixes (wifi, code, règles de la maison), et des modèles de messages pour chaque moment du séjour (avant / pendant / après). Résultat : vous demandez simplement "message de bienvenue pour Julie qui arrive vendredi à 17h" et Claude produit un message complet et cohérent avec les précédents.
+    </div>
+
+    <h2>Comment aborder la création d'une skill</h2>
+    <div class="steps">
+      <li><h4>Identifiez une tâche répétitive</h4><p>Quelque chose que vous refaites chaque semaine ou chaque réservation (messages, relances avis, rapport mensuel…).</p></li>
+      <li><h4>Rassemblez les informations fixes</h4><p>Ce qui ne change jamais : adresse, équipements, ton de communication, règles internes.</p></li>
+      <li><h4>Décrivez le résultat attendu</h4><p>À quoi ressemble un "bon" résultat ? Donnez 1-2 exemples réels.</p></li>
+      <li><h4>Demandez à Claude de vous aider à structurer la skill</h4><p>Vous pouvez littéralement demander à Claude : "aide-moi à créer une skill pour générer mes messages voyageurs Love Room, voici mes infos fixes et deux exemples de messages que j'aime."</p></li>
+    </div>
+
+    <div class="promptbox">
+      <span class="label">À essayer maintenant</span>
+      "Je veux créer une skill réutilisable pour générer mes messages aux voyageurs de mon appartement Love Room. Informations fixes : [adresse], [code boîte à clés], [wifi], [règles de la maison], [numéro d'urgence]. Le ton doit être chaleureux et professionnel. Aide-moi à structurer cette skill avec des modèles pour : message avant l'arrivée, message le jour de l'arrivée, message pendant le séjour en cas de besoin, message après le départ pour demander un avis."
+    </div>
+
+    <div class="callout uncertain">
+      <strong>Point à vérifier</strong>
+      La façon précise de créer, importer et gérer des skills personnalisées dans l'interface (menus, formats de fichiers acceptés) dépend de la version de l'application que vous utilisez et peut avoir changé depuis ma dernière mise à jour de connaissances. Si un menu ou un bouton mentionné ailleurs n'apparaît pas chez vous, décrivez simplement votre besoin à Claude directement dans le chat : la personnalisation ligne par ligne fonctionne toujours, même sans fonctionnalité "skill" dédiée.
+    </div>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="skills">
+      <li><input type="checkbox" id="s1"><label for="s1">J'ai identifié 1 à 3 tâches répétitives dans la gestion de Love Room.</label></li>
+      <li><input type="checkbox" id="s2"><label for="s2">J'ai rassemblé les informations fixes de mon appartement (adresse, wifi, règles…).</label></li>
+      <li><input type="checkbox" id="s3"><label for="s3">J'ai testé le prompt de création de la "Skill Messages Voyageurs".</label></li>
+    </ul>
+
+    <button data-mark-done="skills" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="03-artifacts.html"><span class="pager-label">Précédent</span>← 3. Artifacts</a>
+      <a class="next" href="05-workflows.html"><span class="pager-label">Suivant</span>5. Workflows →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

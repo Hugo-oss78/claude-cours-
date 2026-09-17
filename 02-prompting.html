@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2. Prompting — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting" class="active"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 2 · Prompt engineering</span>
+    <h1>Le prompting : bien parler à Claude</h1>
+    <p class="lede">Un "prompt" est simplement le message que vous envoyez à Claude. La qualité de ce que vous obtenez dépend énormément de la façon dont vous formulez ce message. C'est la compétence la plus rentable à travailler en premier.</p>
+
+    <h2>Les 5 leviers d'un bon prompt</h2>
+    <div class="steps">
+      <li>
+        <h4>Le rôle (role prompting)</h4>
+        <p>Dites à Claude "qui" il doit être pour cette tâche. Exemple : "Tu es un gestionnaire de biens en location courte durée expérimenté."</p>
+      </li>
+      <li>
+        <h4>Le contexte</h4>
+        <p>Donnez les informations utiles : votre situation, votre activité, les contraintes. Plus le contexte est précis, moins Claude doit deviner.</p>
+      </li>
+      <li>
+        <h4>L'instruction</h4>
+        <p>Dites clairement ce que vous voulez : rédiger, résumer, comparer, coder, corriger… Une seule tâche principale par prompt est souvent plus efficace.</p>
+      </li>
+      <li>
+        <h4>Les exemples</h4>
+        <p>Montrez un exemple du résultat attendu (ton, format, longueur). Claude imite très bien un modèle donné.</p>
+      </li>
+      <li>
+        <h4>L'affinage (refinement)</h4>
+        <p>Le premier résultat est un brouillon. Redemandez des ajustements précis ("plus court", "plus chaleureux", "ajoute une section sur…") plutôt que de tout recommencer.</p>
+      </li>
+    </div>
+
+    <h2>Exemple avant / après</h2>
+    <div class="promptbox">
+      <span class="label">❌ Prompt vague</span>
+      "Écris un message pour mon locataire."
+    </div>
+    <div class="promptbox">
+      <span class="label">✅ Prompt structuré</span>
+      "Tu es l'hôte d'un appartement en location courte durée nommé Love Room, situé à [ville]. Rédige un message de bienvenue à envoyer par SMS à un voyageur qui arrive demain à 15h. Ton : chaleureux mais professionnel, en français, maximum 400 caractères. Inclus : le code de la boîte à clés, le wifi, et un numéro à contacter en cas de problème. Termine par une phrase invitant à laisser un avis positif s'ils sont satisfaits."
+    </div>
+
+    <h2>Exercice pratique</h2>
+    <p>Ouvrez claude.ai et testez ce prompt de départ, puis affinez-le vous-même en 2-3 échanges :</p>
+    <div class="promptbox">
+      <span class="label">À copier-coller dans Claude</span>
+      "Tu es un assistant spécialisé en location courte durée (type Airbnb/Booking). Je gère un appartement appelé Love Room. Aide-moi à rédiger le message de bienvenue type que je pourrai réutiliser pour chaque nouveau voyageur, avec des variables entre crochets (ex : [PRENOM], [DATE_ARRIVEE], [CODE_PORTE]) que je remplacerai à chaque fois."
+    </div>
+
+    <h2>Pièges fréquents</h2>
+    <ul>
+      <li><strong>Trop vague</strong> → Claude comble les trous avec des hypothèses qui ne correspondent pas à votre réalité.</li>
+      <li><strong>Trop de tâches à la fois</strong> → mieux vaut découper en plusieurs échanges qu'un prompt fourre-tout.</li>
+      <li><strong>Ne pas corriger, mais recommencer de zéro</strong> → il est presque toujours plus rapide de dire "corrige X" que de réécrire tout le prompt.</li>
+      <li><strong>Oublier le format de sortie</strong> → précisez si vous voulez une liste, un tableau, un texte prêt à copier, un document (Artifact).</li>
+    </ul>
+
+    <div class="callout info">
+      <strong>Lien avec la suite</strong>
+      Une fois le prompt maîtrisé, tout le reste du cours (Artifacts, Skills, Workflows, Automation) consiste à réutiliser de bons prompts sans avoir à les retaper à chaque fois.
+    </div>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="prompting">
+      <li><input type="checkbox" id="p1"><label for="p1">J'ai testé le prompt vague puis le prompt structuré, et comparé les deux résultats.</label></li>
+      <li><input type="checkbox" id="p2"><label for="p2">J'ai écrit mon propre message de bienvenue voyageur avec Claude.</label></li>
+      <li><input type="checkbox" id="p3"><label for="p3">J'ai affiné un résultat au moins 2 fois au lieu de recommencer à zéro.</label></li>
+    </ul>
+
+    <button data-mark-done="prompting" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="01-bases.html"><span class="pager-label">Précédent</span>← 1. Les bases</a>
+      <a class="next" href="03-artifacts.html"><span class="pager-label">Suivant</span>3. Artifacts →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

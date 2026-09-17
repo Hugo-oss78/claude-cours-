@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>1. Les bases de Claude — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases" class="active"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 1 · Commencer ici</span>
+    <h1>Les bases de Claude</h1>
+    <p class="lede">Avant de construire quoi que ce soit, il faut comprendre où vit Claude (les plateformes) et quel "Claude" utiliser pour quelle tâche (les produits). C'est le point le plus souvent confus pour les débutants — on part donc de zéro.</p>
+
+    <h2>Qu'est-ce que Claude ?</h2>
+    <p>Claude est la famille de modèles d'intelligence artificielle conçue par <strong>Anthropic</strong>. Concrètement, c'est un assistant avec lequel vous discutez en langage naturel : vous lui donnez des instructions ou des questions ("prompts"), il vous répond, rédige, code, analyse des documents, etc.</p>
+    <p>Il existe plusieurs tailles/versions de modèles (par exemple des modèles plus rapides et économiques, et d'autres plus puissants pour des tâches complexes). Le nom exact des modèles disponibles change avec le temps.</p>
+    <div class="callout uncertain">
+      <strong>Point à vérifier</strong>
+      Je ne suis pas certain des noms exacts des modèles disponibles au moment où vous lisez ceci (les gammes évoluent régulièrement). Ne vous fiez pas à un nom de modèle que vous auriez lu ailleurs sans le confirmer dans l'interface elle-même ou sur <a href="https://claude.com" target="_blank" rel="noopener">claude.com</a> : l'application vous montre toujours les modèles réellement disponibles pour votre compte.
+    </div>
+
+    <h2>Les plateformes : où utiliser Claude</h2>
+    <p>"Plateforme" = l'appareil ou le support depuis lequel vous accédez à Claude. Le contenu (vos conversations, vos projets) se retrouve généralement sur toutes vos plateformes si vous êtes connecté au même compte.</p>
+    <table>
+      <tr><th>Plateforme</th><th>Ce que c'est</th><th>Quand l'utiliser</th></tr>
+      <tr>
+        <td><strong>Web</strong><br><code>claude.ai</code></td>
+        <td>Interface dans votre navigateur, accessible depuis n'importe quel ordinateur.</td>
+        <td>Le point d'entrée le plus simple pour débuter, discuter, créer des Artifacts, gérer des Projects.</td>
+      </tr>
+      <tr>
+        <td><strong>Application mobile</strong><br>iOS / Android</td>
+        <td>Version smartphone/tablette de claude.ai, avec vos conversations synchronisées.</td>
+        <td>Répondre vite, dicter une idée, consulter un document en déplacement — utile pour piloter Love Room depuis votre téléphone (ex : valider un message avant envoi à un voyageur).</td>
+      </tr>
+      <tr>
+        <td><strong>Application de bureau</strong><br>Claude Desktop (Mac / Windows)</td>
+        <td>Application native installée sur l'ordinateur, en plus de la version web.</td>
+        <td>Un usage plus confortable au quotidien, avec accès plus direct à certains outils/connecteurs locaux.</td>
+      </tr>
+      <tr>
+        <td><strong>Extensions éditeur de code</strong><br>VS Code, JetBrains…</td>
+        <td>Claude intégré directement dans votre environnement de développement.</td>
+        <td>Réservé à la partie "coder" du cours (modules 8-9) si vous développez vous-même le site Love Room.</td>
+      </tr>
+    </table>
+
+    <h2>Les différents "Claude" : quel produit pour quel usage</h2>
+    <p>C'est ici que la confusion est la plus fréquente : "Claude" désigne à la fois le modèle et plusieurs produits différents construits autour de ce modèle. Voici les principaux, du plus simple au plus avancé.</p>
+
+    <div class="grid-2">
+      <div class="tile">
+        <h4>💬 Claude.ai (le chat)</h4>
+        <p>L'interface de conversation classique : questions/réponses, rédaction, Artifacts, Projects (dossiers de travail avec contexte/instructions persistants). C'est votre point de départ.</p>
+      </div>
+      <div class="tile">
+        <h4>💻 Claude Code</h4>
+        <p>Un agent en ligne de commande (et intégrable à un éditeur) spécialisé dans l'écriture, la lecture et la modification de code sur de vrais projets logiciels. C'est l'outil avec lequel <em>je</em> fonctionne en ce moment même pour construire ce cours.</p>
+      </div>
+      <div class="tile">
+        <h4>🖥️ Claude Desktop</h4>
+        <p>L'application de bureau. Selon les versions, elle permet de connecter des outils locaux ou des connecteurs (calendrier, fichiers, etc.) plus facilement que le navigateur.</p>
+      </div>
+      <div class="tile">
+        <h4>🧑‍🤝‍🧑 Claude Cowork</h4>
+        <p>Un mode orienté équipe/orchestration : plusieurs sessions ou agents peuvent travailler en parallèle sur des tâches, dans des environnements dédiés (y compris connectés à des dépôts de code), avec des automatisations programmées ("routines"). Pertinent pour un usage business avancé comme Love Room.</p>
+      </div>
+      <div class="tile">
+        <h4>🔧 API / Claude Developer Platform</h4>
+        <p>L'accès "développeur" : vous appelez Claude depuis votre propre code/application (facturé à l'usage). C'est la brique qui permet de construire un vrai outil sur-mesure (ex : votre site de location qui envoie des messages automatiques).</p>
+      </div>
+      <div class="tile">
+        <h4>📄 Artifacts / Projects / Skills</h4>
+        <p>Ce ne sont pas des "plateformes" séparées mais des fonctionnalités disponibles dans claude.ai (voir modules 3 et 4).</p>
+      </div>
+    </div>
+
+    <div class="callout uncertain">
+      <strong>Sur "Claude Cowork"</strong>
+      C'est un produit plus récent et je ne suis pas totalement certain de son nom commercial exact ni de son périmètre précis au moment où vous lirez ce cours — les produits d'orchestration multi-agents évoluent vite. Vérifiez son existence et ses fonctionnalités actuelles directement dans votre compte claude.ai ou sur claude.com avant de baser une décision business dessus.
+    </div>
+
+    <h2>Gratuit (Claude Pro) vs ce qu'il faut ajouter</h2>
+    <p>Règle générale à retenir : <strong>l'abonnement Claude Pro couvre l'usage conversationnel</strong> (chat, Artifacts, Projects, usage raisonnable de Claude Code selon les limites en vigueur), mais <strong>tout ce qui devient une application autonome pour vos clients (site web, envoi automatique de SMS/emails, hébergement) nécessite des briques supplémentaires</strong>, généralement facturées séparément.</p>
+
+    <table>
+      <tr><th>Besoin</th><th>Couvert par un abonnement Claude (Pro)</th><th>Ce qu'il faut probablement ajouter</th></tr>
+      <tr>
+        <td>Discuter, rédiger, réfléchir avec Claude</td>
+        <td><span class="badge free">Oui</span></td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>Créer des Artifacts (maquette de site, tableau, présentation)</td>
+        <td><span class="badge free">Oui</span></td>
+        <td>Un hébergeur si vous voulez publier le site pour de vrai</td>
+      </tr>
+      <tr>
+        <td>Utiliser Claude Code pour développer le site/l'app Love Room</td>
+        <td><span class="badge pro">Oui, avec des limites d'usage</span></td>
+        <td>Éventuellement un accès API si vous dépassez les limites inclues</td>
+      </tr>
+      <tr>
+        <td>Envoyer automatiquement des messages aux voyageurs (SMS/email/WhatsApp)</td>
+        <td><span class="badge maybe">Partiel</span></td>
+        <td>Un service d'envoi (ex : messagerie, plateforme SMS) + une automatisation/API qui les relie à Claude</td>
+      </tr>
+      <tr>
+        <td>Connecter Claude à votre boîte mail, calendrier, tableur de compta</td>
+        <td><span class="badge maybe">Selon le connecteur</span></td>
+        <td>Autorisations des comptes tiers (Gmail, Google Calendar, etc.), voir module 6</td>
+      </tr>
+      <tr>
+        <td>Faire tourner votre site 24h/24 pour les clients</td>
+        <td><span class="badge api">Non</span></td>
+        <td>Hébergement web (ex: un service d'hébergement statique ou serveur), nom de domaine</td>
+      </tr>
+    </table>
+
+    <div class="callout warn">
+      <strong>Honnêteté sur les coûts</strong>
+      Je ne peux pas vous donner de chiffres précis et à jour sur les prix des abonnements Claude, des quotas d'usage de Claude Code, ou du coût de l'API à l'usage : ces éléments changent souvent. Avant d'engager un budget pour Love Room, ouvrez <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a> et notez les chiffres réels du jour — je vous indiquerai dans le module 10 où ces coûts entrent dans l'architecture, mais pas leur montant exact.
+    </div>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="bases">
+      <li><input type="checkbox" id="b1"><label for="b1">Je sais faire la différence entre une <em>plateforme</em> (web, mobile, ordinateur) et un <em>produit</em> (claude.ai, Claude Code, Desktop, Cowork, API).</label></li>
+      <li><input type="checkbox" id="b2"><label for="b2">Je sais que le chat classique (claude.ai) suffit pour réfléchir/rédiger, mais qu'un vrai site ou une automatisation demande des outils en plus.</label></li>
+      <li><input type="checkbox" id="b3"><label for="b3">Je suis allé vérifier une fois les prix actuels sur claude.com/pricing.</label></li>
+      <li><input type="checkbox" id="b4"><label for="b4">J'ai ouvert claude.ai et je me suis connecté (ou créé un compte).</label></li>
+    </ul>
+
+    <button data-mark-done="bases" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="index.html"><span class="pager-label">Retour</span>Accueil</a>
+      <a class="next" href="02-prompting.html"><span class="pager-label">Suivant</span>2. Prompting →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

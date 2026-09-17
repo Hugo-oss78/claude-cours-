@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cours complet sur Claude — des bases aux fonctionnalités avancées</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav">
+      <span class="progress-pill" data-progress-pill>0 / 10 modules terminés</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <span class="eyebrow">Formation personnelle · gratuite · à votre rythme</span>
+    <h1>Cours complet sur Claude<br>des bases aux fonctionnalités avancées</h1>
+    <p>Apprenez à utiliser Claude, créez des flux de travail, et maîtrisez l'IA — avec, en fil rouge, un objectif concret : automatiser la gestion de votre activité de location <strong>Love Room</strong>.</p>
+  </section>
+
+  <div class="callout uncertain">
+    <strong>À lire avant de commencer</strong>
+    Les produits Anthropic (Claude.ai, Claude Code, Claude Desktop, Claude Cowork), les plans tarifaires et les limites d'usage évoluent régulièrement. Ce cours vous donne la logique et la méthode ; pour les détails précis (prix, quotas, disponibilité d'une fonctionnalité dans votre pays), vérifiez toujours sur <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a> et <a href="https://support.claude.com" target="_blank" rel="noopener">support.claude.com</a> avant de décider quoi payer. Je ne suis pas certain à 100% que chaque détail ci-dessous soit encore exact au moment où vous lisez ceci.
+  </div>
+
+  <h2 style="border:none;">Feuille de route</h2>
+  <div class="roadmap">
+
+    <a class="rcard" data-module="bases" href="01-bases.html">
+      <span class="check">✓</span>
+      <div class="num">01 · COMMENCER ICI</div>
+      <h3>💬 Les bases de Claude</h3>
+      <p>Qu'est-ce que Claude, les plateformes (web, mobile, ordinateur) et les différents produits (claude.ai, Code, Desktop, Cowork).</p>
+    </a>
+
+    <a class="rcard" data-module="prompting" href="02-prompting.html">
+      <span class="check">✓</span>
+      <div class="num">02 · PROMPT ENGINEERING</div>
+      <h3>🖱️ Prompting</h3>
+      <p>Role prompting, contexte, instructions, exemples, affinage du prompt.</p>
+    </a>
+
+    <a class="rcard" data-module="artifacts" href="03-artifacts.html">
+      <span class="check">✓</span>
+      <div class="num">03 · BUILD WITH CLAUDE</div>
+      <h3>📝 Artifacts</h3>
+      <p>Créer, éditer, raffiner des documents, tableaux, présentations, mini-applications interactives.</p>
+    </a>
+
+    <a class="rcard" data-module="skills" href="04-skills.html">
+      <span class="check">✓</span>
+      <div class="num">04 · SKILLS</div>
+      <h3>⚙️ Claude Skills</h3>
+      <p>Recherche, rédaction, analyse, code, skills personnalisées, capacités réutilisables.</p>
+    </a>
+
+    <a class="rcard" data-module="workflows" href="05-workflows.html">
+      <span class="check">✓</span>
+      <div class="num">05 · WORKFLOW DESIGN</div>
+      <h3>🔀 Workflows</h3>
+      <p>Idée → recherche → création → relecture → raffinage. Processus réutilisables, contrôle qualité.</p>
+    </a>
+
+    <a class="rcard" data-module="connectors" href="06-connectors.html">
+      <span class="check">✓</span>
+      <div class="num">06 · CONNECT & INTEGRATE</div>
+      <h3>🔌 Connectors</h3>
+      <p>Connecter Claude à vos informations : Drive, Gmail, agenda, outils métier.</p>
+    </a>
+
+    <a class="rcard" data-module="automation" href="07-automation.html">
+      <span class="check">✓</span>
+      <div class="num">07 · AUTOMATE</div>
+      <h3>🤖 Automation</h3>
+      <p>Déclencheurs → Claude → action → résultat. Tâches automatiques et récurrentes.</p>
+    </a>
+
+    <a class="rcard" data-module="code" href="08-claude-code.html">
+      <span class="check">✓</span>
+      <div class="num">08 · CODE & BUILD</div>
+      <h3>💻 Claude Code</h3>
+      <p>Génération de code, explication, débogage, refactoring, documentation, analyse de données.</p>
+    </a>
+
+    <a class="rcard" data-module="pratique" href="09-projets-pratiques.html">
+      <span class="check">✓</span>
+      <div class="num">09 · DU DÉBUTANT AU POWER USER</div>
+      <h3>🚀 Projets pratiques</h3>
+      <p>Cours guidés : construire un site, une application, un agent — étape par étape.</p>
+    </a>
+
+    <a class="rcard" data-module="loveroom" href="10-business-loveroom.html">
+      <span class="check">✓</span>
+      <div class="num">10 · CAS CONCRET</div>
+      <h3>🏠 Automatiser Love Room</h3>
+      <p>Site de location, messages voyageurs, statistiques, étude de marché, gestion de l'appartement.</p>
+    </a>
+
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">Comment fonctionne le cours</h3>
+    <div class="grid-3">
+      <div class="tile"><h4>📖 Apprendre</h4><p>Chaque module explique un concept avec des mots simples et des exemples concrets.</p></div>
+      <div class="tile"><h4>🛠️ Pratiquer</h4><p>Des prompts prêts à copier-coller pour s'entraîner tout de suite avec Claude.</p></div>
+      <div class="tile"><h4>🏗️ Construire</h4><p>Des mini-projets qui s'assemblent progressivement vers votre objectif final.</p></div>
+      <div class="tile"><h4>🔍 Raffiner</h4><p>Des check-lists pour revenir corriger et améliorer ce que vous avez produit.</p></div>
+      <div class="tile"><h4>🚀 Appliquer</h4><p>Tout se termine sur le cas réel : l'automatisation de Love Room.</p></div>
+      <div class="tile"><h4>📎 Ressources</h4><p><a href="11-ressources.html">Liens officiels, glossaire et rappel des sources à vérifier</a>.</p></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin-top:0;">De débutant à power user</h3>
+    <p>Progression conseillée si vous partez de zéro :</p>
+    <ol>
+      <li><strong>Débutant</strong> — Module 1 (bases) puis Module 2 (prompting)</li>
+      <li><strong>Intermédiaire</strong> — Modules 3 à 5 (Artifacts, Skills, Workflows)</li>
+      <li><strong>Avancé</strong> — Modules 6 à 8 (Connectors, Automation, Claude Code)</li>
+      <li><strong>Power user</strong> — Modules 9 et 10 (projets pratiques, puis Love Room)</li>
+    </ol>
+    <p style="margin-bottom:0;"><em>Les résultats individuels varient et ne sont pas garantis. Ce contenu est fourni à titre informatif uniquement.</em></p>
+  </div>
+</div>
+
+<footer class="sitefoot">
+  Cours personnel généré pour votre apprentissage de Claude — vérifiez les informations sensibles (prix, fonctionnalités) sur les sources officielles Anthropic.
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>

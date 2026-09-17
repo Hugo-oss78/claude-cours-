@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10. Cas Love Room — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom" class="active"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 10 · Cas concret</span>
+    <h1>Automatiser Love Room avec Claude</h1>
+    <p class="lede">On assemble maintenant tous les modules précédents en un plan complet pour votre objectif final : un site de location, une messagerie automatisée avant/pendant/après séjour, des statistiques visiteurs, une veille de marché continue, et la gestion de l'appartement (ménage, travaux, comptabilité).</p>
+
+    <div class="callout uncertain">
+      <strong>Cadrage honnête avant de commencer</strong>
+      Ce module est un <em>plan d'architecture et une méthode</em>, pas une garantie de résultat ni un devis. Je ne connais ni le volume réel de réservations de Love Room, ni votre budget, ni les outils que vous utilisez déjà (plateforme de réservation actuelle, logiciel de compta…) — des éléments qui changeraient concrètement les choix techniques. Utilisez ce plan comme base de discussion avec Claude pour l'adapter à votre situation réelle.
+    </div>
+
+    <h2>Vue d'ensemble : les 5 briques</h2>
+    <div class="grid-3">
+      <div class="tile"><h4>1️⃣ Site de location</h4><p>Vitrine + réservation en ligne (modules 3, 8, 9).</p></div>
+      <div class="tile"><h4>2️⃣ Messagerie voyageurs</h4><p>Avant / pendant / après séjour (modules 4, 5, 7).</p></div>
+      <div class="tile"><h4>3️⃣ Statistiques visiteurs</h4><p>Qui réserve, quand, combien de temps, taux d'occupation (modules 5, 8).</p></div>
+      <div class="tile"><h4>4️⃣ Étude de marché continue</h4><p>Comparatif prix/concurrence mis à jour régulièrement (modules 4, 7).</p></div>
+      <div class="tile"><h4>5️⃣ Gestion de l'appartement</h4><p>Ménage, travaux, comptabilité (modules 5, 6, 7).</p></div>
+    </div>
+
+    <h2>Brique 1 — Le site de location</h2>
+    <p>Reprenez le <a href="09-projets-pratiques.html">Projet A puis B</a> du module 9, appliqués à Love Room :</p>
+    <ul>
+      <li>Pages : accueil/présentation, galerie photo, calendrier de disponibilité, formulaire/module de réservation, infos pratiques post-réservation, contact.</li>
+      <li>Commencez par un Artifact pour valider le design avec vous-même (et vos proches) avant de construire la version complète avec Claude Code.</li>
+      <li>Le calendrier de disponibilité doit rester cohérent avec vos autres canaux (Airbnb, Booking) si vous continuez à les utiliser en parallèle — clarifiez avec Claude comment éviter les doubles réservations (synchronisation manuelle au début, automatisée plus tard).</li>
+    </ul>
+
+    <h2>Brique 2 — La messagerie automatisée</h2>
+    <p>C'est l'assemblage direct de la <strong>Skill Messages Voyageurs</strong> (module 4) et du <strong>cycle voyageur automatisé</strong> (module 7).</p>
+    <table>
+      <tr><th>Moment</th><th>Contenu du message</th><th>Canal possible</th></tr>
+      <tr><td>Confirmation immédiate</td><td>Récapitulatif dates/prix, prochaines étapes</td><td>Email</td></tr>
+      <tr><td>J-2</td><td>Instructions d'accès, parking, transport</td><td>Email / SMS</td></tr>
+      <tr><td>Jour J (arrivée)</td><td>Bienvenue, wifi, code, numéro d'urgence</td><td>SMS / WhatsApp</td></tr>
+      <tr><td>Pendant le séjour</td><td>Disponibilité en cas de besoin</td><td>SMS</td></tr>
+      <tr><td>Jour du départ</td><td>Consignes de check-out</td><td>SMS</td></tr>
+      <tr><td>J+1</td><td>Remerciement + demande d'avis</td><td>Email</td></tr>
+    </table>
+    <div class="callout warn">
+      <strong>Ce qui nécessite un ajout technique</strong>
+      Claude peut <em>rédiger</em> tous ces messages immédiatement. Les <em>envoyer automatiquement</em> au bon moment nécessite de les relier à un service d'envoi réel (email transactionnel, ou service SMS) et à votre calendrier de réservations — c'est un projet Claude Code (module 8-9), pas une fonctionnalité incluse gratuitement dans le chat. Je ne peux pas vous dire quel service SMS/email choisir à votre place : le bon choix dépend de votre volume de messages et de votre budget, à comparer vous-même.
+    </div>
+
+    <h2>Brique 3 — Statistiques visiteurs</h2>
+    <p>Une fois vos réservations centralisées (tableau ou base de données simple), demandez à Claude des analyses régulières :</p>
+    <div class="promptbox">
+      <span class="label">Exemple de prompt mensuel</span>
+      "Voici l'export de mes réservations du mois [coller le tableau/fichier]. Calcule : taux d'occupation, revenu total, durée moyenne de séjour, origine géographique des voyageurs, et évolution par rapport au mois précédent. Présente un résumé clair avec les 3 points les plus importants à retenir."
+    </div>
+    <p>Utile à suivre dans la durée : taux d'occupation, prix moyen par nuit, délai moyen entre réservation et séjour, taux d'avis laissés, taux de clients revenant.</p>
+
+    <h2>Brique 4 — Étude de marché continue</h2>
+    <p>L'idée : demander régulièrement (ex : chaque mois) à Claude de comparer votre offre à des logements similaires dans votre zone, pour ajuster votre prix et vos arguments de vente.</p>
+    <div class="promptbox">
+      <span class="label">Exemple de prompt de veille</span>
+      "Aide-moi à structurer une étude de marché mensuelle pour mon appartement Love Room situé à [ville/quartier]. Je veux comparer : prix moyen par nuit, équipements mis en avant, note moyenne et points forts/faibles cités dans les avis, pour des logements comparables (même capacité, même quartier). Propose-moi une méthode que je peux suivre moi-même pour rassembler ces informations, et un format de tableau pour les comparer facilement."
+    </div>
+    <div class="callout uncertain">
+      <strong>Limite importante à connaître</strong>
+      Je ne peux pas garantir que Claude a, par défaut, un accès automatique et à jour à des annonces de logements concurrents en temps réel — cela dépend des outils de recherche/navigation disponibles dans votre configuration. Dans le doute, la méthode la plus fiable reste : vous rassemblez vous-même les annonces comparables (captures, liens), et vous demandez à Claude de les analyser et de les synthétiser — plutôt que de lui demander de "chercher" seul sans vérification.
+    </div>
+
+    <h2>Brique 5 — Gestion de l'appartement</h2>
+    <div class="grid-3">
+      <div class="tile">
+        <h4>🧹 Ménage</h4>
+        <p>Workflow déclenché à chaque départ : notification à la personne en charge, check-list de contrôle (draps, consommables, état général), confirmation avant la prochaine arrivée.</p>
+      </div>
+      <div class="tile">
+        <h4>🔧 Travaux / maintenance</h4>
+        <p>Un espace centralisé (connecteur fichiers/notes, module 6) pour consigner chaque signalement, prioriser, suivre les artisans, et garder l'historique des interventions.</p>
+      </div>
+      <div class="tile">
+        <h4>💶 Comptabilité</h4>
+        <p>Récapitulatif mensuel des revenus et charges généré par Claude à partir de vos exports, à transmettre ensuite à un comptable pour la partie officielle/fiscale.</p>
+      </div>
+    </div>
+    <div class="callout warn">
+      <strong>Important : la comptabilité reste une responsabilité humaine</strong>
+      Claude peut vous aider à <em>préparer, résumer et organiser</em> vos données comptables, mais je ne suis pas qualifié pour remplacer un expert-comptable sur les obligations légales et fiscales réelles de votre activité de location (régime fiscal, TVA éventuelle, déclarations). Faites toujours valider vos déclarations officielles par un professionnel.
+    </div>
+
+    <h2>Feuille de route suggérée (par phases)</h2>
+    <div class="steps">
+      <li><h4>Phase 1 — Fondations (modules 1-2)</h4><p>Prise en main de Claude, premiers messages voyageurs rédigés à la main avec son aide.</p></li>
+      <li><h4>Phase 2 — Outils réutilisables (modules 3-5)</h4><p>Prototype de site (Artifact), Skill Messages Voyageurs, workflows ménage/maintenance/compta documentés.</p></li>
+      <li><h4>Phase 3 — Connexion au réel (modules 6-7)</h4><p>Connecteurs agenda/mail branchés, premières automatisations testées sur une seule réservation.</p></li>
+      <li><h4>Phase 4 — Construction (modules 8-9)</h4><p>Site de réservation complet construit avec Claude Code, publié en ligne.</p></li>
+      <li><h4>Phase 5 — Pilotage (ce module)</h4><p>Statistiques mensuelles, veille concurrentielle régulière, ajustement continu des prix et du service.</p></li>
+    </div>
+
+    <h2>Ce qui restera probablement payant à part l'abonnement Claude</h2>
+    <table>
+      <tr><th>Élément</th><th>Pourquoi c'est probablement à ajouter</th></tr>
+      <tr><td>Hébergement du site</td><td>Un site public en ligne 24h/24 nécessite un serveur/hébergeur, distinct de Claude.</td></tr>
+      <tr><td>Nom de domaine</td><td>Ex : loveroom.com — acheté séparément auprès d'un registrar.</td></tr>
+      <tr><td>Envoi de SMS/emails automatiques en volume</td><td>Un service dédié est nécessaire pour l'envoi fiable à grande échelle.</td></tr>
+      <tr><td>Usage intensif de l'API Claude</td><td>Si votre site appelle Claude automatiquement à chaque réservation, cet usage est facturé séparément de l'abonnement Pro (facturation à l'usage).</td></tr>
+      <tr><td>Logiciel de comptabilité officiel</td><td>Pour vos obligations légales, au-delà de la préparation/synthèse que Claude peut faire.</td></tr>
+    </table>
+    <p><em>Encore une fois : je ne peux pas vous donner de montants fiables ici, ils changent trop souvent — comparez les offres actuelles au moment de décider.</em></p>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="loveroom">
+      <li><input type="checkbox" id="lr1"><label for="lr1">J'ai les 5 briques en tête et je sais laquelle construire en premier selon mes priorités.</label></li>
+      <li><input type="checkbox" id="lr2"><label for="lr2">Je sais distinguer ce qui est "rédaction/aide" (gratuit avec Claude) de ce qui est "vraie automatisation connectée" (nécessite des outils en plus).</label></li>
+      <li><input type="checkbox" id="lr3"><label for="lr3">J'ai identifié une seule brique pour démarrer cette semaine, plutôt que de vouloir tout faire d'un coup.</label></li>
+    </ul>
+
+    <button data-mark-done="loveroom" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="09-projets-pratiques.html"><span class="pager-label">Précédent</span>← 9. Projets pratiques</a>
+      <a class="next" href="11-ressources.html"><span class="pager-label">Suivant</span>Ressources →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

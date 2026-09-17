@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7. Automation — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation" class="active"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 7 · Automate</span>
+    <h1>L'Automation</h1>
+    <p class="lede">L'automatisation, c'est faire en sorte qu'un workflow se déclenche <strong>sans que vous ayez à y penser</strong> : une date arrive, un événement se produit, et Claude agit selon des règles définies à l'avance.</p>
+
+    <h2>Le schéma de base</h2>
+    <div class="card" style="text-align:center; font-weight:700;">
+      DÉCLENCHEUR (Trigger) → CLAUDE → ACTION → RÉSULTAT
+    </div>
+    <ul>
+      <li><strong>Déclencheur</strong> — un moment précis (ex : "tous les jours à 9h", "J-1 avant une arrivée") ou un événement (ex : "un nouveau message client arrive").</li>
+      <li><strong>Claude</strong> — applique les instructions/le workflow que vous avez défini.</li>
+      <li><strong>Action</strong> — envoie un message, met à jour un tableau, crée une notification.</li>
+      <li><strong>Résultat</strong> — la tâche est faite, avec (idéalement) un enregistrement de ce qui a été fait pour que vous puissiez vérifier.</li>
+    </ul>
+
+    <h2>Deux niveaux d'automatisation à distinguer</h2>
+    <div class="grid-2">
+      <div class="tile">
+        <h4>🟢 Niveau 1 — Rappels programmés</h4>
+        <p>Une tâche se déclenche à une heure/fréquence donnée (ex : chaque lundi, résumé de la semaine) dans votre espace Claude. Simple à mettre en place, bon point de départ.</p>
+      </div>
+      <div class="tile">
+        <h4>🔵 Niveau 2 — Automatisation connectée</h4>
+        <p>Le déclencheur vient d'un événement réel dans un outil externe (nouvelle réservation, email reçu) via un connecteur ou une intégration développée sur-mesure (module 8-9). Plus puissant, demande plus de configuration technique.</p>
+      </div>
+    </div>
+
+    <h2>Exemple appliqué à Love Room : le cycle voyageur automatisé</h2>
+    <table>
+      <tr><th>Moment</th><th>Déclencheur</th><th>Action automatique</th></tr>
+      <tr><td>J-2 avant l'arrivée</td><td>Date de réservation</td><td>Message avec les instructions d'accès et d'arrivée</td></tr>
+      <tr><td>Jour de l'arrivée</td><td>Heure prévue d'arrivée</td><td>Message de bienvenue + rappel wifi/code</td></tr>
+      <tr><td>Milieu du séjour (séjours longs)</td><td>Nombre de jours écoulés</td><td>Message "tout se passe bien ?" avec numéro de contact</td></tr>
+      <tr><td>Jour du départ</td><td>Heure de check-out</td><td>Message de remerciement + rappel des consignes de départ</td></tr>
+      <tr><td>J+1 après départ</td><td>Fin de séjour</td><td>Demande d'avis + notification à la femme de ménage</td></tr>
+    </table>
+
+    <div class="promptbox">
+      <span class="label">À essayer maintenant (préparation, pas encore l'automatisation elle-même)</span>
+      "Voici le cycle de messages que je veux automatiser pour Love Room : [coller le tableau ci-dessus]. Rédige les 5 messages types correspondants, avec des variables entre crochets pour les infos qui changent à chaque réservation."
+    </div>
+
+    <div class="callout warn">
+      <strong>Ce que ce module ne peut pas vous garantir</strong>
+      Je ne connais pas avec certitude la fonctionnalité exacte proposée aujourd'hui dans votre interface Claude pour programmer des automatisations récurrentes (nom, limites, disponibilité selon plateforme/abonnement) — cela fait partie des zones qui évoluent vite. Ce que je peux affirmer avec plus de confiance : la logique déclencheur → action fonctionne aussi très bien en la construisant "à la main" via l'API (module 8-9), ce qui vous donne un contrôle total et ne dépend pas d'une fonctionnalité spécifique de l'interface.
+    </div>
+
+    <h2>Garde-fous à mettre en place</h2>
+    <ul>
+      <li><strong>Validation humaine sur les actions sensibles</strong> : par exemple, un message envoyé automatiquement est acceptable ; un remboursement automatique ne devrait pas l'être sans votre accord.</li>
+      <li><strong>Journal des actions</strong> : gardez une trace de ce qui a été envoyé/fait automatiquement pour pouvoir vérifier et corriger en cas d'erreur.</li>
+      <li><strong>Testez avant de généraliser</strong> : activez une automatisation sur une seule réservation test avant de la déployer sur tous vos voyageurs.</li>
+    </ul>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="automation">
+      <li><input type="checkbox" id="au1"><label for="au1">Je comprends le schéma Déclencheur → Claude → Action → Résultat.</label></li>
+      <li><input type="checkbox" id="au2"><label for="au2">J'ai rédigé mes 5 messages types du cycle voyageur.</label></li>
+      <li><input type="checkbox" id="au3"><label for="au3">J'ai listé les actions qui doivent rester validées par moi (jamais 100% automatiques).</label></li>
+    </ul>
+
+    <button data-mark-done="automation" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="06-connectors.html"><span class="pager-label">Précédent</span>← 6. Connectors</a>
+      <a class="next" href="08-claude-code.html"><span class="pager-label">Suivant</span>8. Claude Code →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

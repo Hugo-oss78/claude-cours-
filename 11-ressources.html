@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ressources — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html" class="active">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Ressources</span>
+    <h1>Liens officiels, glossaire et rappel des sources</h1>
+    <p class="lede">Cette page regroupe les points de vérification à utiliser en continu pendant le cours, plutôt qu'une liste figée d'informations qui pourraient devenir fausses avec le temps.</p>
+
+    <h2>Sources officielles à consulter</h2>
+    <div class="callout uncertain">
+      <strong>Pourquoi si peu de liens ?</strong>
+      Par principe, je ne vous donne ici que des adresses de domaines officiels que je connais avec confiance, sans inventer de pages précises ni de titres d'articles que je ne peux pas vérifier. Pour un sujet aussi précis qu'un article ou une page d'aide en particulier, demandez-moi de vous aider à formuler la recherche plutôt que de me faire deviner une URL exacte.
+    </div>
+    <table>
+      <tr><th>Site</th><th>À utiliser pour</th></tr>
+      <tr><td><a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a></td><td>Utiliser Claude en ligne (chat, Artifacts, Projects).</td></tr>
+      <tr><td><a href="https://claude.com" target="_blank" rel="noopener">claude.com</a></td><td>Présentation des produits Anthropic, actualités, téléchargements des applications.</td></tr>
+      <tr><td><a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a></td><td>Les tarifs et limites d'usage réels et à jour — la seule source fiable pour un chiffre précis.</td></tr>
+      <tr><td><a href="https://support.claude.com" target="_blank" rel="noopener">support.claude.com</a></td><td>Aide détaillée sur les fonctionnalités, dépannage, disponibilité par pays.</td></tr>
+    </table>
+
+    <h2>Glossaire</h2>
+    <table>
+      <tr><th>Terme</th><th>Explication simple</th></tr>
+      <tr><td>Prompt</td><td>Le message que vous envoyez à Claude.</td></tr>
+      <tr><td>Artifact</td><td>Un contenu généré par Claude et affiché à part (document, page web, tableau…), éditable.</td></tr>
+      <tr><td>Skill</td><td>Un ensemble d'instructions réutilisables pour que Claude fasse toujours bien un certain type de tâche.</td></tr>
+      <tr><td>Workflow</td><td>Un enchaînement d'étapes documenté pour produire un résultat de façon fiable et répétable.</td></tr>
+      <tr><td>Connector</td><td>Une connexion autorisée entre Claude et un de vos outils réels (mail, agenda, fichiers…).</td></tr>
+      <tr><td>Automation / Trigger</td><td>Un déclencheur (heure, événement) qui lance une action sans intervention manuelle.</td></tr>
+      <tr><td>Claude Code</td><td>L'agent spécialisé dans la construction de vrais projets logiciels (sites, applications).</td></tr>
+      <tr><td>API</td><td>La façon dont un logiciel (votre site, par exemple) peut appeler Claude automatiquement, facturée à l'usage.</td></tr>
+      <tr><td>Hébergement (hosting)</td><td>Le service qui garde votre site accessible en ligne 24h/24, distinct de Claude.</td></tr>
+      <tr><td>Nom de domaine</td><td>L'adresse de votre site (ex : loveroom.fr), achetée séparément.</td></tr>
+      <tr><td>Agent</td><td>Un système qui enchaîne lui-même plusieurs actions vers un objectif, avec moins d'intervention manuelle qu'une conversation simple.</td></tr>
+    </table>
+
+    <h2>Rappel des points d'incertitude signalés dans ce cours</h2>
+    <ul>
+      <li>Noms exacts et disponibilité des modèles Claude (module 1)</li>
+      <li>Existence et périmètre précis de "Claude Cowork" (module 1)</li>
+      <li>Prix et quotas d'usage exacts (modules 1, 7, 10)</li>
+      <li>Fonctionnalités précises de création de Skills dans l'interface (module 4)</li>
+      <li>Fonctionnalité exacte de programmation d'automatisations récurrentes (module 7)</li>
+      <li>Accès automatique de Claude à des annonces concurrentes en temps réel (module 10)</li>
+    </ul>
+    <p>Sur chacun de ces points, vérifiez directement dans votre interface Claude ou sur les sources officielles ci-dessus avant de prendre une décision qui engage du temps ou de l'argent.</p>
+
+    <div class="pager">
+      <a href="10-business-loveroom.html"><span class="pager-label">Précédent</span>← 10. Cas Love Room</a>
+      <a class="next" href="index.html"><span class="pager-label">Retour</span>Accueil →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

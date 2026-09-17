@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3. Artifacts — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts" class="active"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 3 · Build with Claude</span>
+    <h1>Les Artifacts</h1>
+    <p class="lede">Un Artifact, c'est un contenu "à part" que Claude crée et affiche dans un panneau dédié à côté de la conversation : un document, un tableau, une présentation, une page web, un petit outil interactif. Vous pouvez le modifier, lui demander des retouches, et le télécharger ou le partager.</p>
+
+    <h2>Ce que vous pouvez créer</h2>
+    <div class="grid-3">
+      <div class="tile"><h4>📄 Documents</h4><p>Textes longs, rapports, contrats types, procédures internes.</p></div>
+      <div class="tile"><h4>📊 Tableaux / feuilles de calcul</h4><p>Suivi des réservations, budget, comparatif de prix concurrents.</p></div>
+      <div class="tile"><h4>📽️ Présentations</h4><p>Pitch pour un investisseur, bilan trimestriel de Love Room.</p></div>
+      <div class="tile"><h4>🌐 Pages web / maquettes</h4><p>Une première version visuelle de votre site de location, testable immédiatement.</p></div>
+      <div class="tile"><h4>🧩 Outils interactifs</h4><p>Un calculateur de prix, un simulateur de rentabilité, un mini tableau de bord.</p></div>
+      <div class="tile"><h4>💻 Code</h4><p>Scripts, composants, pages complètes — la base du module 8 (Claude Code) pour des projets plus gros.</p></div>
+    </div>
+
+    <h2>Le cycle : créer → éditer → raffiner</h2>
+    <div class="steps">
+      <li><h4>Créer</h4><p>Demandez le contenu avec un objectif clair ("crée une page d'accueil pour mon site de location Love Room avec galerie photo, calendrier de dispo et formulaire de contact").</p></li>
+      <li><h4>Regarder le résultat</h4><p>L'Artifact s'affiche à part : vous gardez la conversation pour discuter, l'Artifact pour le "produit fini".</p></li>
+      <li><h4>Éditer / raffiner</h4><p>Demandez des changements ciblés : "change la couleur principale en terracotta", "ajoute une section avis clients", "raccourcis le texte d'intro".</p></li>
+      <li><h4>Réutiliser</h4><p>Téléchargez, copiez le contenu, ou repartez de cet Artifact dans une conversation future pour continuer à l'améliorer.</p></li>
+    </div>
+
+    <div class="promptbox">
+      <span class="label">À essayer maintenant</span>
+      "Crée une page web (Artifact) présentant mon appartement Love Room en location courte durée : nom, une galerie image (avec des blocs de couleur en attendant les vraies photos), une description accueillante, les équipements clés, un calendrier de disponibilité fictif, et un bouton d'appel à l'action 'Réserver'. Style chaleureux, moderne, couleurs terracotta et beige."
+    </div>
+
+    <h2>Artifacts vs vrai site en production</h2>
+    <div class="callout info">
+      <strong>Important à comprendre</strong>
+      Un Artifact est excellent pour <em>prototyper</em> rapidement à quoi ressemblera votre site — mais ce n'est pas, par défaut, un site public en ligne accessible 24h/24 à vos futurs voyageurs. Pour publier réellement, il faudra exporter ce travail vers un hébergement web (voir modules 8 et 9). Considérez l'Artifact comme votre "brouillon visuel gratuit" avant de passer à la construction réelle.
+    </div>
+
+    <h2>Bonnes pratiques</h2>
+    <ul>
+      <li>Donnez un objectif business clair, pas juste "fais un joli site" — précisez le public visé (voyageurs, familles, professionnels en déplacement…).</li>
+      <li>Itérez par petites touches plutôt que de tout redemander à chaque fois.</li>
+      <li>Gardez une trace des versions qui vous plaisent (téléchargez-les) avant de faire des changements plus radicaux.</li>
+      <li>Pour un document destiné à être partagé avec d'autres personnes (ex : un guide pour la femme de ménage), pensez à demander un format clair, imprimable.</li>
+    </ul>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="artifacts">
+      <li><input type="checkbox" id="a1"><label for="a1">J'ai créé un premier Artifact "page d'accueil Love Room".</label></li>
+      <li><input type="checkbox" id="a2"><label for="a2">J'ai demandé au moins 2 retouches ciblées sur cet Artifact.</label></li>
+      <li><input type="checkbox" id="a3"><label for="a3">Je comprends la différence entre un Artifact (prototype) et un site publié en ligne.</label></li>
+    </ul>
+
+    <button data-mark-done="artifacts" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="02-prompting.html"><span class="pager-label">Précédent</span>← 2. Prompting</a>
+      <a class="next" href="04-skills.html"><span class="pager-label">Suivant</span>4. Claude Skills →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

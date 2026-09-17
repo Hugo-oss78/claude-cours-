@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5. Workflows — Cours Claude</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><span class="logo">C</span> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows" class="active"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Module 5 · Workflow design</span>
+    <h1>Les Workflows</h1>
+    <p class="lede">Un workflow, c'est simplement un enchaînement d'étapes que vous répétez pour produire un résultat fiable — au lieu d'improviser à chaque fois. C'est ce qui transforme "je discute avec Claude" en "j'ai un vrai processus métier".</p>
+
+    <h2>Le schéma de base</h2>
+    <div class="card" style="text-align:center; font-weight:700; letter-spacing:0.02em;">
+      IDÉE → RECHERCHE → CRÉATION → RELECTURE → RAFFINAGE
+    </div>
+    <ul>
+      <li><strong>Idée</strong> — le déclencheur : une nouvelle réservation, une question client, une fin de mois.</li>
+      <li><strong>Recherche</strong> — rassembler l'information nécessaire (dates, historique du client, données du mois).</li>
+      <li><strong>Création</strong> — Claude produit le contenu ou l'analyse demandée.</li>
+      <li><strong>Relecture</strong> — vous (ou Claude lui-même) vérifiez la qualité, la justesse, le ton.</li>
+      <li><strong>Raffinage</strong> — ajustements avant validation finale.</li>
+    </ul>
+
+    <h2>Pourquoi documenter un workflow</h2>
+    <div class="grid-2">
+      <div class="tile"><h4>✅ Qualité constante</h4><p>Le même niveau de qualité, réservation après réservation, sans dépendre de votre mémoire du jour.</p></div>
+      <div class="tile"><h4>♻️ Réutilisable</h4><p>Vous (ou une personne qui vous aide) pouvez suivre le même processus sans tout réinventer.</p></div>
+      <div class="tile"><h4>🔍 Contrôle qualité intégré</h4><p>Une étape de relecture systématique évite les erreurs qui abîment votre image (faute dans un message, mauvaise date...).</p></div>
+      <div class="tile"><h4>🤖 Base de l'automatisation</h4><p>Un workflow clair et répété à la main est la première étape avant de l'automatiser complètement (module 7).</p></div>
+    </div>
+
+    <h2>Exemple : le workflow "nouvelle réservation" pour Love Room</h2>
+    <div class="steps">
+      <li><h4>Idée / déclencheur</h4><p>Une nouvelle réservation arrive sur votre plateforme de location (Airbnb, Booking, ou votre propre site).</p></li>
+      <li><h4>Recherche</h4><p>Claude rassemble : dates du séjour, nombre de voyageurs, éventuel historique (client déjà venu ?).</p></li>
+      <li><h4>Création</h4><p>Génération du message de confirmation personnalisé + ajout au calendrier + mise à jour du tableau de suivi.</p></li>
+      <li><h4>Relecture</h4><p>Vérification : bonnes dates, bon prénom, ton correct, aucune information sensible erronée.</p></li>
+      <li><h4>Raffinage</h4><p>Envoi. Le workflow se répète automatiquement le jour J-1 (rappel), le jour J (accueil), et J+1 après départ (remerciement + demande d'avis) — voir module 7 pour automatiser cet enchaînement.</p></li>
+    </div>
+
+    <div class="promptbox">
+      <span class="label">À essayer maintenant</span>
+      "Aide-moi à écrire, étape par étape, le workflow complet que je dois suivre à chaque nouvelle réservation pour mon appartement Love Room, de la confirmation de réservation jusqu'à la demande d'avis après le départ. Présente-le sous forme de liste numérotée avec, pour chaque étape, ce qu'il faut faire, quand, et le message ou l'action associée."
+    </div>
+
+    <h2>Workflows utiles pour la gestion complète de Love Room</h2>
+    <table>
+      <tr><th>Workflow</th><th>Déclencheur</th><th>Résultat visé</th></tr>
+      <tr><td>Cycle voyageur</td><td>Nouvelle réservation</td><td>Messages avant / pendant / après séjour envoyés au bon moment</td></tr>
+      <tr><td>Ménage</td><td>Fin d'un séjour</td><td>Notification à la personne en charge du ménage + check-list de contrôle</td></tr>
+      <tr><td>Maintenance</td><td>Signalement d'un problème (client ou vous)</td><td>Fiche d'incident, priorisation, suivi jusqu'à résolution</td></tr>
+      <tr><td>Comptabilité</td><td>Fin de mois</td><td>Récapitulatif des revenus, charges, à transmettre au comptable</td></tr>
+      <tr><td>Veille concurrentielle</td><td>Récurrent (ex : chaque semaine)</td><td>Comparatif des prix et taux d'occupation des logements similaires</td></tr>
+    </table>
+    <p>Ces cinq workflows seront détaillés et assemblés dans le <a href="10-business-loveroom.html">module 10</a>.</p>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="workflows">
+      <li><input type="checkbox" id="w1"><label for="w1">J'ai écrit avec Claude le workflow complet "cycle voyageur".</label></li>
+      <li><input type="checkbox" id="w2"><label for="w2">J'ai identifié les workflows prioritaires pour mon activité (ménage, maintenance, compta…).</label></li>
+      <li><input type="checkbox" id="w3"><label for="w3">Je comprends la différence entre un workflow fait "à la main" et un workflow automatisé.</label></li>
+    </ul>
+
+    <button data-mark-done="workflows" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
+
+    <div class="pager">
+      <a href="04-skills.html"><span class="pager-label">Précédent</span>← 4. Claude Skills</a>
+      <a class="next" href="06-connectors.html"><span class="pager-label">Suivant</span>6. Connectors →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
