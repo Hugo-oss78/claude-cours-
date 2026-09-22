@@ -250,6 +250,31 @@ h3 { font-size: 1.08rem; margin: 22px 0 8px; }
 
 .lede { font-size: 1.05rem; color: var(--ink-soft); margin: 0 0 20px; }
 
+.modinfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 0 0 24px;
+}
+.modinfo-item {
+  flex: 1 1 220px;
+  background: var(--info-soft);
+  border: 1px solid #a9cfe3;
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-size: 0.86rem;
+  color: var(--ink);
+}
+.modinfo-label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--info);
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
 p { margin: 0 0 14px; }
 ul, ol { margin: 0 0 14px; padding-left: 22px; }
 li { margin-bottom: 6px; }
