@@ -37,6 +37,7 @@
     </ul>
     <h4>Ressources</h4>
     <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
       <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
       <li><a href="index.html">🏠 Accueil</a></li>
     </ul>
@@ -76,6 +77,11 @@
       </li>
     </div>
 
+    <div class="callout info">
+      <strong>💡 Astuce</strong>
+      Les prompts ci-dessous contiennent des variables comme <code>[ville]</code> ou <code>[CODE_PORTE]</code>. Remplissez une fois <a href="profil.html">votre profil</a> et elles s'afficheront automatiquement avec vos vraies infos, en surbrillance.
+    </div>
+
     <h2>Exemple avant / après</h2>
     <div class="promptbox">
       <span class="label">❌ Prompt vague</span>
@@ -112,6 +118,27 @@
       <li><input type="checkbox" id="p2"><label for="p2">J'ai écrit mon propre message de bienvenue voyageur avec Claude.</label></li>
       <li><input type="checkbox" id="p3"><label for="p3">J'ai affiné un résultat au moins 2 fois au lieu de recommencer à zéro.</label></li>
     </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="prompting-1" data-answer="b" data-explain="Sans contexte précis, Claude comble les trous avec des hypothèses qui ne correspondent pas forcément à votre réalité.">
+        <p class="quiz-question">Quel est le principal problème d'un prompt trop vague ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Il coûte plus cher</button>
+          <button class="quiz-opt" data-choice="b">Claude comble les trous avec des hypothèses</button>
+          <button class="quiz-opt" data-choice="c">Il est automatiquement refusé</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="prompting-2" data-answer="b" data-explain="Demander un ajustement précis ('plus court', 'ajoute X') est presque toujours plus rapide que de tout réécrire depuis zéro.">
+        <p class="quiz-question">Après un premier résultat imparfait, quelle est la meilleure approche ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Recommencer le prompt entièrement</button>
+          <button class="quiz-opt" data-choice="b">Demander des ajustements précis</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
 
     <button data-mark-done="prompting" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
 

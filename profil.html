@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon profil — Cours Claude</title>
+<link rel="icon" href="assets/img/favicon.png?v=2" type="image/png">
+<link rel="icon" href="assets/img/logo.svg?v=2" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
+<link rel="manifest" href="manifest.json?v=2">
+<meta name="theme-color" content="#c2542c">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" class="logo" alt="Logo du cours"> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="profil.html" class="active">✏️ Mon profil</a></li>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Personnalisation</span>
+    <h1>Mon profil (mon appartement)</h1>
+    <p class="lede">Renseignez une fois les informations fixes de votre appartement Love Room. Les modules qui contiennent des prompts avec des variables comme <code>[ville]</code> ou <code>[adresse]</code> les remplaceront automatiquement par vos vraies infos, en surbrillance.</p>
+
+    <div class="callout ok">
+      <strong>Confidentialité</strong>
+      Ces informations restent uniquement dans le navigateur de cet appareil (stockage local) — rien n'est envoyé à Claude, à Anthropic ni ailleurs automatiquement. Vous continuez à copier-coller vous-même les prompts dans claude.ai quand vous êtes prêt.
+    </div>
+
+    <form class="profile-form" data-profile-form>
+      <div class="profile-field">
+        <label for="f-nom">Nom de l'appartement</label>
+        <input id="f-nom" type="text" data-field="nom" placeholder="Love Room">
+      </div>
+      <div class="profile-field">
+        <label for="f-ville">Ville / quartier</label>
+        <input id="f-ville" type="text" data-field="ville" placeholder="Lyon, quartier de la Croix-Rousse">
+      </div>
+      <div class="profile-field">
+        <label for="f-adresse">Adresse complète</label>
+        <input id="f-adresse" type="text" data-field="adresse" placeholder="12 rue des Lilas, 69004 Lyon">
+      </div>
+      <div class="profile-field">
+        <label for="f-code">Code boîte à clés / porte</label>
+        <input id="f-code" type="text" data-field="code_porte" placeholder="Boîte à clés au portail, code 4821">
+      </div>
+      <div class="profile-field">
+        <label for="f-wifi">Wifi (nom et mot de passe)</label>
+        <input id="f-wifi" type="text" data-field="wifi" placeholder="Réseau LoveRoom-Wifi, mot de passe bienvenue2024">
+      </div>
+      <div class="profile-field">
+        <label for="f-regles">Règles de la maison (résumé court)</label>
+        <textarea id="f-regles" data-field="regles" placeholder="Pas de fête, pas d'animaux, check-out avant 11h..."></textarea>
+      </div>
+      <div class="profile-field">
+        <label for="f-urgence">Numéro de contact d'urgence</label>
+        <input id="f-urgence" type="text" data-field="urgence" placeholder="06 12 34 56 78">
+      </div>
+      <div class="profile-field">
+        <label for="f-ton">Ton souhaité pour vos messages</label>
+        <input id="f-ton" type="text" data-field="ton" placeholder="Chaleureux mais professionnel">
+      </div>
+
+      <div class="profile-actions">
+        <button type="submit" class="btn primary">Enregistrer mon profil</button>
+        <button type="button" class="btn" data-profile-reset>Effacer</button>
+      </div>
+      <p class="profile-status" data-profile-status></p>
+    </form>
+
+    <div class="callout info">
+      <strong>Où ça s'applique</strong>
+      Repassez sur les modules <a href="02-prompting.html">2 (Prompting)</a>, <a href="04-skills.html">4 (Claude Skills)</a> et <a href="10-business-loveroom.html">10 (Cas Love Room)</a> après avoir enregistré votre profil : les prompts prêts à copier-coller y afficheront vos vraies infos à la place des <code>[crochets]</code>.
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

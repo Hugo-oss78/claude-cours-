@@ -37,6 +37,7 @@
     </ul>
     <h4>Ressources</h4>
     <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
       <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
       <li><a href="index.html">🏠 Accueil</a></li>
     </ul>
@@ -108,6 +109,26 @@
       <li><input type="checkbox" id="au2"><label for="au2">J'ai rédigé mes 5 messages types du cycle voyageur.</label></li>
       <li><input type="checkbox" id="au3"><label for="au3">J'ai listé les actions qui doivent rester validées par moi (jamais 100% automatiques).</label></li>
     </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="automation-1" data-answer="b" data-explain="Le déclencheur, c'est ce qui lance l'action (une date, un événement) — pas le résultat lui-même.">
+        <p class="quiz-question">Que représente le "Déclencheur" dans le schéma d'automatisation ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Le résultat final</button>
+          <button class="quiz-opt" data-choice="b">Un moment ou un événement qui lance l'action</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="automation-2" data-answer="b" data-explain="Un remboursement touche à l'argent : ce type d'action sensible doit toujours rester validé par vous, contrairement à un message de bienvenue standard.">
+        <p class="quiz-question">Quel type d'action devrait rester validé par vous, jamais 100% automatique ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Un message de bienvenue</button>
+          <button class="quiz-opt" data-choice="b">Un remboursement</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
 
     <button data-mark-done="automation" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
 

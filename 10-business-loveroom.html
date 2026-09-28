@@ -37,6 +37,7 @@
     </ul>
     <h4>Ressources</h4>
     <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
       <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
       <li><a href="index.html">🏠 Accueil</a></li>
     </ul>
@@ -64,6 +65,11 @@
       <div class="tile"><h4>3️⃣ Statistiques visiteurs</h4><p>Qui réserve, quand, combien de temps, taux d'occupation (modules 5, 8).</p></div>
       <div class="tile"><h4>4️⃣ Étude de marché continue</h4><p>Comparatif prix/concurrence mis à jour régulièrement (modules 4, 7).</p></div>
       <div class="tile"><h4>5️⃣ Gestion de l'appartement</h4><p>Ménage, travaux, comptabilité (modules 5, 6, 7).</p></div>
+    </div>
+
+    <div class="callout info">
+      <strong>💡 Astuce</strong>
+      Certains prompts de ce module (Brique 4) contiennent <code>[ville/quartier]</code>. Remplissez une fois <a href="profil.html">votre profil</a> pour qu'elle s'affiche automatiquement avec vos vraies infos.
     </div>
 
     <h2>Brique 1 — Le site de location</h2>
@@ -155,6 +161,26 @@
       <li><input type="checkbox" id="lr2"><label for="lr2">Je sais distinguer ce qui est "rédaction/aide" (gratuit avec Claude) de ce qui est "vraie automatisation connectée" (nécessite des outils en plus).</label></li>
       <li><input type="checkbox" id="lr3"><label for="lr3">J'ai identifié une seule brique pour démarrer cette semaine, plutôt que de vouloir tout faire d'un coup.</label></li>
     </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="loveroom-1" data-answer="b" data-explain="Rédiger les messages est gratuit avec le chat ; les envoyer automatiquement au bon moment demande de les relier à un vrai service d'envoi et à votre calendrier.">
+        <p class="quiz-question">Rédiger les messages voyageurs est possible avec l'abonnement Claude seul, mais les envoyer automatiquement au bon moment nécessite...</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Rien de plus</button>
+          <button class="quiz-opt" data-choice="b">Un service d'envoi relié à votre calendrier</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="loveroom-2" data-answer="b" data-explain="Claude peut préparer et résumer vos chiffres, mais la validation des obligations légales et fiscales reste le rôle d'un professionnel.">
+        <p class="quiz-question">Qui doit valider vos déclarations comptables officielles ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Claude peut s'en charger entièrement</button>
+          <button class="quiz-opt" data-choice="b">Un professionnel (expert-comptable)</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
 
     <button data-mark-done="loveroom" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
 

@@ -37,6 +37,7 @@
     </ul>
     <h4>Ressources</h4>
     <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
       <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
       <li><a href="index.html">🏠 Accueil</a></li>
     </ul>
@@ -70,6 +71,11 @@
       Une skill qui contiendrait : le nom et l'adresse de l'appartement, le ton à employer, les informations pratiques fixes (wifi, code, règles de la maison), et des modèles de messages pour chaque moment du séjour (avant / pendant / après). Résultat : vous demandez simplement "message de bienvenue pour Julie qui arrive vendredi à 17h" et Claude produit un message complet et cohérent avec les précédents.
     </div>
 
+    <div class="callout info">
+      <strong>💡 Astuce</strong>
+      Le prompt ci-dessous contient les variables <code>[adresse]</code>, <code>[code boîte à clés]</code>, <code>[wifi]</code>, <code>[règles de la maison]</code>, <code>[numéro d'urgence]</code>. Remplissez une fois <a href="profil.html">votre profil</a> pour qu'elles s'affichent automatiquement avec vos vraies infos.
+    </div>
+
     <h2>Comment aborder la création d'une skill</h2>
     <div class="steps">
       <li><h4>Identifiez une tâche répétitive</h4><p>Quelque chose que vous refaites chaque semaine ou chaque réservation (messages, relances avis, rapport mensuel…).</p></li>
@@ -94,6 +100,27 @@
       <li><input type="checkbox" id="s2"><label for="s2">J'ai rassemblé les informations fixes de mon appartement (adresse, wifi, règles…).</label></li>
       <li><input type="checkbox" id="s3"><label for="s3">J'ai testé le prompt de création de la "Skill Messages Voyageurs".</label></li>
     </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="skills-1" data-answer="b" data-explain="C'est tout l'intérêt d'une skill : enregistrer une fois le contexte fixe pour ne plus avoir à le répéter.">
+        <p class="quiz-question">À quoi sert une Skill personnalisée ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Changer le modèle de Claude</button>
+          <button class="quiz-opt" data-choice="b">Éviter de réexpliquer le même contexte à chaque fois</button>
+          <button class="quiz-opt" data-choice="c">Payer moins cher son abonnement</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="skills-2" data-answer="b" data-explain="Le code de la boîte à clés ne change pas d'une réservation à l'autre — c'est une info fixe, à mettre dans la skill. Le prénom, lui, change à chaque voyageur.">
+        <p class="quiz-question">Laquelle de ces infos est fixe (donc à mettre dans la skill) ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Le prénom du voyageur</button>
+          <button class="quiz-opt" data-choice="b">Le code de la boîte à clés</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
 
     <button data-mark-done="skills" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
 

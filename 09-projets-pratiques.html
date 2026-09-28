@@ -37,6 +37,7 @@
     </ul>
     <h4>Ressources</h4>
     <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
       <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
       <li><a href="index.html">🏠 Accueil</a></li>
     </ul>
@@ -102,6 +103,26 @@
       <li><input type="checkbox" id="pp2"><label for="pp2">J'ai découpé mon projet en petites étapes testables, plutôt qu'un seul prompt géant.</label></li>
       <li><input type="checkbox" id="pp3"><label for="pp3">Je sais comment "tout arrêter" si une automatisation se comporte mal.</label></li>
     </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="pratique-1" data-answer="b" data-explain="Une fonctionnalité à la fois, testée avant de continuer, évite d'accumuler des bugs difficiles à isoler.">
+        <p class="quiz-question">Quelle est la meilleure approche pour construire une application avec Claude Code ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Tout demander en un seul prompt géant</button>
+          <button class="quiz-opt" data-choice="b">Une fonctionnalité à la fois, testée avant de continuer</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="pratique-2" data-answer="b" data-explain="Observer plusieurs cycles complets et savoir comment tout arrêter sont les garde-fous de base avant de laisser un agent agir seul.">
+        <p class="quiz-question">Avant de laisser un agent autonome agir seul sur vos outils réels, il faut...</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Rien, on peut lui faire confiance direct</button>
+          <button class="quiz-opt" data-choice="b">L'observer sur plusieurs cycles et prévoir un moyen de tout arrêter</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
 
     <button data-mark-done="pratique" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
 

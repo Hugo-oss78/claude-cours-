@@ -37,6 +37,7 @@
     </ul>
     <h4>Ressources</h4>
     <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
       <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
       <li><a href="index.html">🏠 Accueil</a></li>
     </ul>
@@ -170,6 +171,27 @@
       <li><input type="checkbox" id="b3"><label for="b3">Je suis allé vérifier une fois les prix actuels sur claude.com/pricing.</label></li>
       <li><input type="checkbox" id="b4"><label for="b4">J'ai ouvert claude.ai et je me suis connecté (ou créé un compte).</label></li>
     </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="bases-1" data-answer="b" data-explain="Les Artifacts servent justement à prototyper rapidement une idée, sans construire un vrai projet logiciel.">
+        <p class="quiz-question">Pour prototyper rapidement l'apparence de votre futur site de location, quel outil utiliser ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Claude Code</button>
+          <button class="quiz-opt" data-choice="b">Un Artifact (dans claude.ai)</button>
+          <button class="quiz-opt" data-choice="c">L'API seule</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="bases-2" data-answer="b" data-explain="Faire tourner un site 24h/24 nécessite un hébergement séparé — ce n'est pas fourni par l'abonnement Claude.">
+        <p class="quiz-question">Un site de réservation en ligne accessible 24h/24 à vos voyageurs est-il inclus dans l'abonnement Claude Pro ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Oui, tout est inclus</button>
+          <button class="quiz-opt" data-choice="b">Non, un hébergement séparé est nécessaire</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
 
     <button data-mark-done="bases" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
 

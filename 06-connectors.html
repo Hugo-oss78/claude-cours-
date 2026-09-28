@@ -37,6 +37,7 @@
     </ul>
     <h4>Ressources</h4>
     <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
       <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
       <li><a href="index.html">🏠 Accueil</a></li>
     </ul>
@@ -93,6 +94,26 @@
       <li><input type="checkbox" id="c2"><label for="c2">J'ai identifié les 2-3 connecteurs prioritaires pour Love Room (mail, agenda, fichiers).</label></li>
       <li><input type="checkbox" id="c3"><label for="c3">J'ai vérifié dans les paramètres de mon compte quels connecteurs sont réellement disponibles.</label></li>
     </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="connectors-1" data-answer="b" data-explain="Un connecteur est une autorisation explicite que vous donnez — Claude ne devine jamais vos données sans y avoir accès.">
+        <p class="quiz-question">Un connecteur permet à Claude de...</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Deviner vos informations</button>
+          <button class="quiz-opt" data-choice="b">Accéder à un outil que vous avez explicitement autorisé</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="connectors-2" data-answer="b" data-explain="L'écran plus grand du web rend la procédure d'autorisation plus confortable, même si le mobile fonctionne aussi.">
+        <p class="quiz-question">Où est-il recommandé de faire la première autorisation d'un connecteur ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Aucune différence, n'importe où</button>
+          <button class="quiz-opt" data-choice="b">Sur le web, plus confortable pour cette étape</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
 
     <button data-mark-done="connectors" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer ce module comme terminé</button>
 
