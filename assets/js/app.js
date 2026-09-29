@@ -19,7 +19,8 @@
     { id: "automation", href: "07-automation.html" },
     { id: "code", href: "08-claude-code.html" },
     { id: "pratique", href: "09-projets-pratiques.html" },
-    { id: "loveroom", href: "10-business-loveroom.html" }
+    { id: "loveroom", href: "10-business-loveroom.html" },
+    { id: "immobilier", href: "12-agent-immobilier.html" }
   ];
 
   function loadProgress() {

@@ -36,8 +36,10 @@ index.html                     Page d'accueil / feuille de route
 09-projets-pratiques.html      Module 9 — Construire un site / une appli / un agent
 10-business-loveroom.html      Module 10 — Cas concret : automatiser Love Room
 11-ressources.html             Liens officiels, glossaire, points à vérifier
+12-agent-immobilier.html       Atelier bonus — construire un agent de recherche immobilière
+profil.html                    Profil local (infos de l'appartement) pour personnaliser les prompts
 assets/css/style.css           Style partagé (clair/sombre automatique)
-assets/js/app.js               Suivi de progression (localStorage)
+assets/js/app.js               Suivi de progression, profil, quiz (localStorage)
 ```
 
 ## Note sur la fiabilité du contenu

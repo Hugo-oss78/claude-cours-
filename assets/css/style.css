@@ -413,13 +413,13 @@ code {
 
 /* step flow */
 .steps { counter-reset: step; list-style: none; padding: 0; margin: 16px 0; }
-.steps li {
+.steps > li {
   counter-increment: step;
   position: relative;
   padding-left: 42px;
   margin-bottom: 16px;
 }
-.steps li::before {
+.steps > li::before {
   content: counter(step);
   position: absolute;
   left: 0; top: 0;
@@ -434,6 +434,12 @@ code {
   justify-content: center;
 }
 .steps h4 { margin: 0 0 4px; }
+.steps > li > ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 8px 0 0;
+}
+.steps > li > ul li { margin-bottom: 6px; }
 
 /* pager */
 .pager {

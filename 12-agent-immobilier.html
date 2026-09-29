@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>11. Atelier : agent immobilier — Cours Claude</title>
+<link rel="icon" href="assets/img/favicon.png?v=2" type="image/png">
+<link rel="icon" href="assets/img/logo.svg?v=2" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png?v=2">
+<link rel="manifest" href="manifest.json?v=2">
+<meta name="theme-color" content="#c2542c">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html"><img src="assets/img/logo.svg" class="logo" alt="Logo du cours"> Cours Claude</a>
+    <div class="topnav"><span class="progress-pill" data-progress-pill></span></div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h4>Cours</h4>
+    <ul>
+      <li><a href="01-bases.html" data-module="bases"><span class="dot"></span>1. Les bases</a></li>
+      <li><a href="02-prompting.html" data-module="prompting"><span class="dot"></span>2. Prompting</a></li>
+      <li><a href="03-artifacts.html" data-module="artifacts"><span class="dot"></span>3. Artifacts</a></li>
+      <li><a href="04-skills.html" data-module="skills"><span class="dot"></span>4. Claude Skills</a></li>
+      <li><a href="05-workflows.html" data-module="workflows"><span class="dot"></span>5. Workflows</a></li>
+      <li><a href="06-connectors.html" data-module="connectors"><span class="dot"></span>6. Connectors</a></li>
+      <li><a href="07-automation.html" data-module="automation"><span class="dot"></span>7. Automation</a></li>
+      <li><a href="08-claude-code.html" data-module="code"><span class="dot"></span>8. Claude Code</a></li>
+      <li><a href="09-projets-pratiques.html" data-module="pratique"><span class="dot"></span>9. Projets pratiques</a></li>
+      <li><a href="10-business-loveroom.html" data-module="loveroom"><span class="dot"></span>10. Cas Love Room</a></li>
+      <li><a href="12-agent-immobilier.html" data-module="immobilier" class="active"><span class="dot"></span>11. Atelier : agent immo</a></li>
+    </ul>
+    <h4>Ressources</h4>
+    <ul>
+      <li><a href="profil.html">✏️ Mon profil</a></li>
+      <li><a href="11-ressources.html">📎 Liens &amp; glossaire</a></li>
+      <li><a href="index.html">🏠 Accueil</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <span class="eyebrow">Atelier bonus · Construire un agent</span>
+    <h1>Construire un agent de recherche immobilière</h1>
+    <p class="lede">Mise en pratique directe du "Projet C" du module 9 : un agent qui surveille les nouvelles annonces immobilières selon vos critères, les note, et vous envoie un récapitulatif — pour repérer un bien à acheter (ou un futur appartement à gérer façon Love Room) sans éplucher les annonces vous-même chaque jour.</p>
+
+    <div class="modinfo">
+      <div class="modinfo-item"><span class="modinfo-label">Quel Claude ?</span>Claude.ai pour cadrer les critères et tester l'analyse d'une annonce · Claude Code pour construire le pipeline complet.</div>
+      <div class="modinfo-item"><span class="modinfo-label">Plateforme</span>📱 💻 mobile/web ok pour cadrer · 🖥️ ordinateur nécessaire pour construire l'agent qui tourne seul.</div>
+    </div>
+
+    <div class="callout uncertain">
+      <strong>Cadrage honnête avant de commencer</strong>
+      Trois limites réelles à connaître avant de vous lancer :
+      <br>1. Je ne peux pas garantir que Claude a un accès fiable et à jour, en temps réel, aux annonces de sites comme SeLoger, LeBonCoin ou PAP — cela dépend d'outils de navigation/recherche qui ne sont pas toujours disponibles ou stables.
+      <br>2. Récupérer automatiquement le contenu de ces sites (scraping) pose souvent un problème légal : la plupart interdisent ça dans leurs conditions d'utilisation. Vérifiez les CGU du site avant d'automatiser quoi que ce soit dessus, ou utilisez une source qui vous y autorise explicitement (API officielle, alertes email que <em>vous</em> recevez déjà).
+      <br>3. Une estimation de rendement locatif ou une note "bonne affaire" donnée par Claude n'est pas un conseil financier ou juridique — c'est une aide au tri, pas une décision d'achat.
+    </div>
+
+    <h2>Ce que l'agent va faire, concrètement</h2>
+    <div class="grid-3">
+      <div class="tile"><h4>🔎 Filtrer</h4><p>Ne garder que les annonces qui correspondent à vos critères (budget, ville, surface, type).</p></div>
+      <div class="tile"><h4>📊 Noter</h4><p>Attribuer un score ou un résumé "pour/contre" à chaque bien selon vos priorités.</p></div>
+      <div class="tile"><h4>📩 Résumer</h4><p>Vous envoyer un récapitulatif régulier, plutôt que de tout consulter vous-même.</p></div>
+    </div>
+
+    <h2>Étape par étape</h2>
+    <div class="steps">
+      <li>
+        <h4>Définir précisément vos critères</h4>
+        <p>Budget max, zone géographique, type de bien, surface minimale, et ce qui compte le plus pour vous (rendement locatif ? calme ? proximité transports ?). Plus c'est précis, plus l'agent sera utile.</p>
+      </li>
+      <li>
+        <h4>Choisir une source de données que vous avez le droit d'utiliser</h4>
+        <p>Trois options réalistes, de la plus simple à la plus technique :</p>
+        <ul>
+          <li><strong>Vos alertes email existantes</strong> — la plupart des sites immobiliers vous envoient déjà un email par nouvelle annonce correspondant à vos critères. Transférez-les à Claude (ou copiez-collez le contenu) pour qu'il les analyse. Aucun problème légal : c'est vous qui les recevez.</li>
+          <li><strong>Une API officielle</strong>, si le site ou un agrégateur en propose une pour les particuliers — vérifiez au cas par cas, je ne peux pas vous garantir qu'une offre gratuite existe.</li>
+          <li><strong>Un export manuel régulier</strong> (vous copiez-collez vous-même les annonces qui vous intéressent une fois par jour) — le plus simple à mettre en place, le moins automatisé.</li>
+        </ul>
+      </li>
+      <li>
+        <h4>Construire le pipeline avec Claude Code</h4>
+        <p>Une fois la source choisie, Claude Code peut écrire un petit programme qui : récupère les nouveaux emails/exports, en extrait les infos clés (prix, surface, ville, lien), et les met de côté pour l'étape de notation.</p>
+      </li>
+      <li>
+        <h4>Faire noter chaque bien par Claude</h4>
+        <p>Pour chaque annonce récupérée, demandez une note ou un résumé pour/contre selon vos critères (voir le prompt ci-dessous pour tester ça dès maintenant, sans coder).</p>
+      </li>
+      <li>
+        <h4>Automatiser l'envoi d'un récapitulatif (module 7)</h4>
+        <p>Reprenez le schéma Déclencheur → Claude → Action du module Automation : par exemple, chaque matin, un récapitulatif des biens du jour avec leur note, envoyé par email.</p>
+      </li>
+      <li>
+        <h4>Poser des garde-fous</h4>
+        <p>L'agent trie et alerte — il ne décide jamais d'acheter. Toute visite, offre ou signature reste une démarche humaine, avec vérification sur place et avis d'un professionnel (agent immobilier, notaire) avant tout engagement.</p>
+      </li>
+    </div>
+
+    <h2>À tester dès maintenant, sans rien construire</h2>
+    <div class="promptbox">
+      <span class="label">Étape 1 : cadrer les critères avec Claude</span>
+      "Aide-moi à définir des critères précis pour un agent de recherche immobilière : je cherche un bien à [ville/quartier], budget maximum [budget], type [appartement/maison], surface minimale [surface] m². Mon objectif est [investissement locatif / résidence principale / autre]. Propose-moi une liste de critères de tri (prix au m², rendement locatif estimé, proximité transports...) et comment les pondérer selon mon objectif."
+    </div>
+
+    <div class="promptbox">
+      <span class="label">Étape 4 : tester la notation sur une vraie annonce</span>
+      "Voici le texte d'une annonce immobilière que j'ai reçue par email : [collez le texte de l'annonce]. Mes critères : [rappelez vos critères de l'étape précédente]. Donne-moi : un résumé en 3 lignes, une estimation du rendement locatif si les infos le permettent (en précisant tes hypothèses), les points positifs, les points de vigilance, et une note sur 10 par rapport à mes critères."
+    </div>
+
+    <div class="callout warn">
+      <strong>Sur l'estimation de rendement locatif</strong>
+      Claude peut calculer un rendement théorique à partir des chiffres que vous lui donnez (prix, loyer estimé), mais il ne connaît pas le marché locatif réel de votre secteur avec certitude. Faites toujours vérifier un loyer de marché auprès d'une agence locale ou d'un comparateur avant de baser une décision dessus.
+    </div>
+
+    <h2>À retenir</h2>
+    <ul class="checklist" data-checklist="immobilier">
+      <li><input type="checkbox" id="im1"><label for="im1">J'ai défini mes critères précis (budget, zone, type, priorités).</label></li>
+      <li><input type="checkbox" id="im2"><label for="im2">J'ai choisi une source de données que j'ai le droit d'utiliser (alertes email, API, export manuel).</label></li>
+      <li><input type="checkbox" id="im3"><label for="im3">J'ai testé la notation d'une vraie annonce avec le prompt ci-dessus.</label></li>
+      <li><input type="checkbox" id="im4"><label for="im4">Je sais que la décision d'achat, la visite et la vérification restent entièrement humaines.</label></li>
+    </ul>
+
+    <h2>Petit quiz</h2>
+    <div class="quiz">
+      <div class="quiz-q" data-qid="immobilier-1" data-answer="b" data-explain="La plupart des sites d'annonces interdisent le scraping dans leurs CGU — les alertes que vous recevez déjà sont une source que vous avez explicitement le droit d'utiliser.">
+        <p class="quiz-question">Quelle est la source de données la plus sûre légalement pour démarrer votre agent ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Récupérer automatiquement le contenu du site sans vérifier ses règles</button>
+          <button class="quiz-opt" data-choice="b">Vos propres alertes email déjà reçues</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+      <div class="quiz-q" data-qid="immobilier-2" data-answer="b" data-explain="L'agent aide à trier et à prioriser, mais la visite, la vérification et la décision finale restent toujours humaines.">
+        <p class="quiz-question">L'agent peut-il décider d'acheter un bien à votre place s'il obtient une très bonne note ?</p>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-choice="a">Oui, s'il est bien configuré</button>
+          <button class="quiz-opt" data-choice="b">Non, la décision reste toujours humaine</button>
+        </div>
+        <p class="quiz-feedback"></p>
+      </div>
+    </div>
+
+    <button data-mark-done="immobilier" class="card" style="cursor:pointer; border:none; width:100%; text-align:center; font-weight:700; color:var(--accent-dark);">Marquer cet atelier comme terminé</button>
+
+    <div class="pager">
+      <a href="10-business-loveroom.html"><span class="pager-label">Précédent</span>← 10. Cas Love Room</a>
+      <a class="next" href="11-ressources.html"><span class="pager-label">Suivant</span>Ressources →</a>
+    </div>
+  </main>
+</div>
+
+<footer class="sitefoot">Cours personnel — vérifiez les informations sensibles sur les sources officielles Anthropic.</footer>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
